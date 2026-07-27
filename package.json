@@ -1,0 +1,38 @@
+{
+  "name": "my-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "motion": "^12.42.2",
+    "next": "16.2.6",
+    "react": "^19",
+    "react-dom": "^19",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.62.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^10.8.0",
+    "playwright": "^1.62.0",
+    "postcss": "^8.5",
+    "prettier": "^3.9.6",
+    "sharp": "^0.35.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "5.7.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "hono": "4.12.25"
+    }
+  }
+}
