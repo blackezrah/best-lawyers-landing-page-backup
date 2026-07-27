@@ -31,6 +31,8 @@ export function CtaButton({ variant = 'gold', size = 'lg', className, fullWidth 
   return (
     <a
       href={MEETING_URL}
+      target="_top"
+      rel="noopener noreferrer"
       className={cn(base, sizes[size], variants[variant], fullWidth && 'w-full', className)}
     >
       <span>{CTA_LABEL}</span>

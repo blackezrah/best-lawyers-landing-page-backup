@@ -50,6 +50,8 @@ export function SiteHeader() {
           ))}
           <a
             href={MEETING_URL}
+            target="_top"
+            rel="noopener noreferrer"
             className="rounded-full border border-gold/60 px-5 py-2 text-sm font-medium tracking-tight text-gold transition-colors hover:bg-gold hover:text-ink"
           >
             Check Market Availability
@@ -84,6 +86,8 @@ export function SiteHeader() {
             ))}
             <a
               href={MEETING_URL}
+              target="_top"
+              rel="noopener noreferrer"
               className="mt-2 rounded-full border border-gold/60 px-3 py-3 text-center text-base font-medium text-gold"
             >
               Check Market Availability
