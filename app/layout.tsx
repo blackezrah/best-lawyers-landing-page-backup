@@ -3,9 +3,16 @@ import { preload } from 'react-dom'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.bestlawyers.com'),
+
   title: 'Best Lawyers®',
+
   description:
     'Premier Placement helps clients discover your practice earlier in their search for legal counsel.',
+
+  alternates: {
+    canonical: '/premier-placement',
+  },
 }
 
 export const viewport: Viewport = {
