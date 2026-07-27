@@ -1,5 +1,3 @@
-'use client'
-
 import { Reveal, Stagger, StaggerItem } from './reveal'
 import { CtaButton } from './cta-button'
 

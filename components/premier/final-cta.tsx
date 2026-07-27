@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import { Reveal } from "./reveal"
 import { CtaButton } from "./cta-button"
@@ -10,7 +8,7 @@ export function FinalCta() {
       <section className="relative min-h-[100svh] overflow-hidden bg-ink text-ivory">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
           <Image
-            src="/Visibility-Shapes-Opps.png"
+            src="/Visibility-Shapes-Opps.webp"
             alt=""
             fill
             priority={false}
@@ -53,7 +51,7 @@ export function FinalCta() {
               </a>
             ))}
           </nav>
-          <p className="text-xs tracking-tight text-ivory/45">© 2026 Best Lawyers. All rights reserved.</p>
+          <p className="text-xs tracking-tight text-ivory/50">© 2026 Best Lawyers. All rights reserved.</p>
         </div>
       </footer>
     </>

@@ -1,10 +1,8 @@
-'use client'
-
 import Image from 'next/image'
 import { Reveal } from './reveal'
 import { CtaButton } from './cta-button'
 
-const premierImage = '/premier.png'
+const premierImage = '/premier.webp'
 
 const premierAlt =
   'Best Lawyers search results with Julie Cooper’s Premier Placement profile prominently displayed at the top'

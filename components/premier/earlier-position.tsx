@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import { Reveal } from "./reveal"
 import { CtaButton } from "./cta-button"
@@ -9,7 +7,7 @@ export function EarlierPosition() {
     <section className="relative min-h-[100svh] overflow-hidden bg-parchment text-ink">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <Image
-          src="/be-seen-first.png"
+          src="/be-seen-first.webp"
           alt=""
           fill
           priority={false}

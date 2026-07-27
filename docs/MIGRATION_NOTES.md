@@ -11,7 +11,9 @@ Remaining framework-specific features to replace during an Instapage migration:
 
 Portable assets:
 
-- `public/premier-placement-laptop.png`
+- `public/best-lawyers-hero.webp`
+- `public/harder-to-overlook.webp`
+- `public/premier.webp`
 - `public/fonts/IBMPlexSans-Regular.ttf`
 - `public/fonts/IBMPlexSans-SemiBold.ttf`
 - `public/fonts/IBMPlexSans-Bold.ttf`

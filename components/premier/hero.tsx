@@ -31,7 +31,7 @@ export function Hero() {
           className="absolute inset-0"
         >
           <Image
-            src="/best-lawyers-hero.png"
+            src="/best-lawyers-hero.webp"
             alt=""
             fill
             priority

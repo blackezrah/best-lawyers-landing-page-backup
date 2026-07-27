@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import { Reveal } from './reveal'
 
@@ -9,7 +7,7 @@ export function IntentionalPlacement() {
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="absolute inset-y-0 right-0 w-[72vw]">
           <Image
-            src="/harder-to-overlook.png"
+            src="/harder-to-overlook.webp"
             alt=""
             fill
             priority={false}
