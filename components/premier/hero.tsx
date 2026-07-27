@@ -25,7 +25,7 @@ export function Hero() {
       className="relative min-h-[100svh] overflow-hidden bg-ink text-ivory"
       aria-labelledby="hero-heading"
     >
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 max-md:hidden">
         <motion.div
           style={{ y: visualY }}
           className="absolute inset-0"

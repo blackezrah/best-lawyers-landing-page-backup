@@ -3,8 +3,8 @@ import { Reveal } from './reveal'
 
 export function IntentionalPlacement() {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden bg-ivory text-ink">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+    <section className="relative min-h-[100svh] overflow-hidden bg-ivory text-ink max-md:min-h-0">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 max-md:hidden">
         <div className="absolute inset-y-0 right-0 w-[72vw]">
           <Image
             src="/harder-to-overlook.webp"
@@ -19,7 +19,7 @@ export function IntentionalPlacement() {
         <div className="absolute inset-0 bg-gradient-to-t from-ivory/10 via-transparent to-ivory/5" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl items-center px-5 py-24 sm:px-8 sm:py-32">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl items-center px-5 py-24 sm:px-8 sm:py-32 max-md:min-h-0 max-md:py-28">
         <div className="max-w-md xl:max-w-xl">
           <Reveal x={-32}>
             <h2 className="text-balance font-serif text-4xl font-light leading-[1.05] tracking-[-0.02em] text-ink sm:text-5xl">

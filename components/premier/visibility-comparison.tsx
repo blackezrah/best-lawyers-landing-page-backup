@@ -9,8 +9,8 @@ const premierAlt =
 
 export function VisibilityComparison() {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden bg-ink text-ivory">
-      <div className="pointer-events-none absolute inset-0">
+    <section className="relative min-h-[100svh] overflow-hidden bg-ink text-ivory max-md:min-h-0">
+      <div className="pointer-events-none absolute inset-0 max-md:hidden">
         <Image
           src={premierImage}
           alt={premierAlt}
@@ -24,7 +24,7 @@ export function VisibilityComparison() {
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-ink/20 via-transparent to-ink/10" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-5 py-24 sm:px-8 sm:py-32">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-5 py-24 sm:px-8 sm:py-32 max-md:min-h-0 max-md:py-28">
         <div className="max-w-md">
           <Reveal x={-34}>
             <h2 className="font-serif text-2xl font-light tracking-tight text-ivory/80">

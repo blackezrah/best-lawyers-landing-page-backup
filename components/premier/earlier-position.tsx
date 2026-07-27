@@ -4,8 +4,8 @@ import { CtaButton } from "./cta-button"
 
 export function EarlierPosition() {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden bg-parchment text-ink">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+    <section className="relative min-h-[100svh] overflow-hidden bg-parchment text-ink max-md:min-h-0">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 max-md:hidden">
         <Image
           src="/be-seen-first.webp"
           alt=""
@@ -18,7 +18,7 @@ export function EarlierPosition() {
         <div className="absolute inset-0 bg-gradient-to-t from-parchment/15 via-transparent to-parchment/10" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-5 py-24 sm:px-8 sm:py-32">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-5 py-24 sm:px-8 sm:py-32 max-md:min-h-0 max-md:py-28">
         <div className="max-w-md">
           <Reveal x={-32}>
             <h2 className="font-serif text-4xl leading-[1.05] tracking-tight text-ink text-balance md:text-5xl">

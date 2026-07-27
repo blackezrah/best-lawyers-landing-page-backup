@@ -5,8 +5,8 @@ import { CtaButton } from "./cta-button"
 export function FinalCta() {
   return (
     <>
-      <section className="relative min-h-[100svh] overflow-hidden bg-ink text-ivory">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+      <section className="relative min-h-[100svh] overflow-hidden bg-ink text-ivory max-md:min-h-[70svh]">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 max-md:hidden">
           <Image
             src="/Visibility-Shapes-Opps.webp"
             alt=""
@@ -19,7 +19,7 @@ export function FinalCta() {
           <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-transparent to-ink/35" />
         </div>
 
-        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-4xl items-center justify-center px-6 py-24 text-center md:py-32">
+        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-4xl items-center justify-center px-6 py-24 text-center md:py-32 max-md:min-h-[70svh]">
           <Reveal y={34}>
             <h2 className="font-serif text-5xl leading-[1.02] tracking-tight text-balance md:text-7xl">
               Visibility shapes opportunity.
