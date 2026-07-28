@@ -37,24 +37,27 @@ export function FinalCta() {
 
       <footer className="border-t border-line-dark/60 bg-ink py-14 text-ivory">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-6 md:flex-row">
-          <Image
-            src="/best-lawyers-light-logo.webp"
-            alt="Best Lawyers"
-            width={434}
-            height={88}
-            className="h-auto w-[8.8rem]"
-          />
+          <a href="https://www.bestlawyers.com" target="_top" rel="noopener noreferrer" aria-label="Visit Best Lawyers">
+            <Image
+              src="/best-lawyers-light-logo.webp"
+              alt="Best Lawyers"
+              width={434}
+              height={88}
+              className="h-auto w-[8.8rem]"
+              // Brighten the footer logo so it reads white on transparent backgrounds.
+              // Developer note: replace with an approved white logo file if available.
+              style={{ filter: 'brightness(2) saturate(1.2)' }}
+            />
+          </a>
+
           <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-            {["About", "Methodology", "Privacy", "Terms"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-sm text-ivory/60 transition-colors hover:text-coral"
-              >
-                {item}
-              </a>
-            ))}
+            <a href="https://www.bestlawyers.com/about" target="_top" rel="noopener noreferrer" className="text-sm text-ivory/60 transition-colors hover:text-coral">About</a>
+            <a href="https://www.bestlawyers.com/methodology" target="_top" rel="noopener noreferrer" className="text-sm text-ivory/60 transition-colors hover:text-coral">Methodology</a>
+            <a href="https://www.bestlawyers.com/privacy-policy" target="_top" rel="noopener noreferrer" className="text-sm text-ivory/60 transition-colors hover:text-coral">Privacy</a>
+            <a href="https://www.bestlawyers.com/cookie-policy" target="_top" rel="noopener noreferrer" className="text-sm text-ivory/60 transition-colors hover:text-coral">Cookies</a>
+            <a href="https://www.bestlawyers.com/cookie-policy" target="_top" rel="noopener noreferrer" className="text-sm text-ivory/60 transition-colors hover:text-coral">Terms</a>
           </nav>
+
           <p className="text-xs tracking-tight text-ivory/50">© 2026 Best Lawyers. All rights reserved.</p>
         </div>
       </footer>

@@ -25,6 +25,11 @@ export function Hero() {
       className="relative min-h-[100svh] overflow-hidden bg-ink text-ivory"
       aria-labelledby="hero-heading"
     >
+      {/* Navy/charcoal gradient at the top to improve contrast behind the fixed header.
+          Increased height so the fade reaches lower into the hero. */}
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-30 h-56 sm:h-72">
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/95 to-transparent" />
+      </div>
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 max-md:hidden">
         <motion.div
           style={{ y: visualY }}
@@ -37,6 +42,9 @@ export function Hero() {
             priority
             sizes="100vw"
             className="object-cover"
+            // Shift the image focal point down so the face is lower in the frame
+            // (adjust the second value to move more/less: '50% 40%' etc.)
+            style={{ objectPosition: '50% 35%' }}
           />
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-r from-ink from-0% via-ink/95 via-[38%] to-transparent to-[67%]" />

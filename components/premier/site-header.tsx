@@ -33,7 +33,13 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex h-[4.5rem] w-full max-w-7xl items-center justify-between px-5 sm:px-8">
-        <a href="#main" className="flex items-center gap-3" aria-label="Best Lawyers Premier Placement, back to top">
+        <a
+          href="https://www.bestlawyers.com"
+          target="_top"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3"
+          aria-label="Best Lawyers — go to bestlawyers.com"
+        >
           <Image
             src="/best-lawyers-light-logo.webp"
             alt="Best Lawyers"
@@ -41,6 +47,9 @@ export function SiteHeader() {
             height={88}
             priority
             className="h-auto w-[8.4rem] sm:w-[9.6rem]"
+            // Increase brightness so the logo appears white on transparent backgrounds.
+            // Replace with a proper white variant of the logo file if supplied.
+            style={{ filter: 'brightness(2) saturate(1.2)' }}
           />
         </a>
 
