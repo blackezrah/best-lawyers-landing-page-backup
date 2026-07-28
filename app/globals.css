@@ -1,49 +1,105 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('/fonts/IBMPlexSans-Regular.ttf') format('truetype');
+  font-family: 'Optima';
+  src: url('/fonts/Optima-Regular.ttf') format('truetype');
+  font-weight: 300 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Optima';
+  src: url('/fonts/Optima-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Optima';
+  src: url('/fonts/Optima-Bold.ttf') format('truetype');
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Optima';
+  src: url('/fonts/Optima-Italic.ttf') format('truetype');
+  font-weight: 300 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gentleman';
+  src: url('/fonts/Gentleman-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gentleman';
+  src: url('/fonts/Gentleman-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gentleman';
+  src: url('/fonts/Gentleman-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gentleman';
+  src: url('/fonts/Gentleman-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('/fonts/IBMPlexSans-SemiBold.ttf') format('truetype');
-  font-weight: 600;
+  font-family: 'Gentleman';
+  src: url('/fonts/Gentleman-Medium.woff') format('woff');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('/fonts/IBMPlexSans-Bold.ttf') format('truetype');
-  font-weight: 700;
+  font-family: 'Gentleman';
+  src: url('/fonts/Gentleman-Bold.woff') format('woff');
+  font-weight: 600 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'IBM Plex Serif';
-  src: url('/fonts/IBMPlexSerif-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Gentleman';
+  src: url('/fonts/Gentleman-Heavy.woff') format('woff');
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'IBM Plex Serif';
-  src: url('/fonts/IBMPlexSerif-SemiBold.ttf') format('truetype');
-  font-weight: 600;
+  font-family: 'Gentleman';
+  src: url('/fonts/Gentleman-Black.woff') format('woff');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'IBM Plex Serif';
-  src: url('/fonts/IBMPlexSerif-Bold.ttf') format('truetype');
-  font-weight: 700;
+  font-family: 'Gentleman Black';
+  src: url('/fonts/Gentleman-Black.woff') format('woff');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -53,6 +109,7 @@
 @theme inline {
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
+  --font-editorial-black: var(--font-gentleman-black);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -79,6 +136,10 @@
   --color-parchment: var(--parchment);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
+  --color-gold-light: var(--gold-on-light);
+  --color-coral: var(--coral);
+  --color-blue-gray: var(--blue-gray);
+  --color-blue-gray-dark: var(--blue-gray-dark);
   --color-line: var(--line);
   --color-line-dark: var(--line-dark);
 
@@ -92,33 +153,38 @@
 :root {
   color-scheme: light;
 
-  --font-sans: 'IBM Plex Sans', Arial, Helvetica, sans-serif;
-  --font-serif: 'IBM Plex Serif', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Gentleman', Georgia, 'Times New Roman', serif;
+  --font-serif: 'Optima', Arial, Helvetica, sans-serif;
+  --font-gentleman-black: 'Gentleman Black', 'Gentleman', Georgia, 'Times New Roman', serif;
 
-  --ink: oklch(0.19 0.012 70);
-  --ink-soft: oklch(0.28 0.012 70);
-  --ivory: oklch(0.972 0.008 85);
-  --parchment: oklch(0.945 0.012 84);
-  --gold: oklch(0.72 0.095 76);
-  --gold-soft: oklch(0.82 0.07 82);
-  --line: oklch(0.87 0.01 80);
-  --line-dark: oklch(0.35 0.01 70);
+  --ink: #1A1F25;
+  --ink-soft: #272E38;
+  --ivory: #FFFFFF;
+  --parchment: #F3F3F3;
+  --gold: #C9A35B;
+  --gold-on-light: #AF863A;
+  --gold-soft: #D8BB7A;
+  --coral: #EB4649;
+  --blue-gray: #4C5562;
+  --blue-gray-dark: #3E4754;
+  --line: #E0E0E0;
+  --line-dark: #3E4754;
 
   --background: var(--ivory);
   --foreground: var(--ink);
-  --card: oklch(1 0 0);
+  --card: #FFFFFF;
   --card-foreground: var(--ink);
-  --popover: oklch(1 0 0);
+  --popover: #FFFFFF;
   --popover-foreground: var(--ink);
   --primary: var(--ink);
   --primary-foreground: var(--ivory);
   --secondary: var(--parchment);
   --secondary-foreground: var(--ink);
   --muted: var(--parchment);
-  --muted-foreground: oklch(0.5 0.012 72);
+  --muted-foreground: var(--blue-gray);
   --accent: var(--gold);
   --accent-foreground: var(--ink);
-  --destructive: oklch(0.55 0.2 27);
+  --destructive: #DA1F1F;
   --border: var(--line);
   --input: var(--line);
   --ring: var(--gold);
@@ -140,7 +206,7 @@
     font-feature-settings: 'ss01', 'cv01';
   }
   ::selection {
-    background: oklch(0.72 0.095 76 / 0.28);
+    background: rgb(201 163 91 / 0.28);
   }
   h1,
   h2,

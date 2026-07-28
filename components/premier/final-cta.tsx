@@ -30,22 +30,26 @@ export function FinalCta() {
             <div className="mt-10 flex justify-center">
               <CtaButton variant="gold" />
             </div>
-            <p className="mt-10 font-serif text-3xl leading-none text-gold">→</p>
+            <p className="mt-10 font-serif text-3xl leading-none text-coral">→</p>
           </Reveal>
         </div>
       </section>
 
       <footer className="border-t border-line-dark/60 bg-ink py-14 text-ivory">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-6 md:flex-row">
-          <p className="font-serif text-xl tracking-tight text-ivory">
-            Best Lawyers<sup className="ml-[1px] align-super text-[0.5em] text-gold">&reg;</sup>
-          </p>
+          <Image
+            src="/best-lawyers-light-logo.webp"
+            alt="Best Lawyers"
+            width={434}
+            height={88}
+            className="h-auto w-[8.8rem]"
+          />
           <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
             {["About", "Methodology", "Privacy", "Terms"].map((item) => (
               <a
                 key={item}
                 href="#"
-                className="text-sm text-ivory/60 transition-colors hover:text-gold"
+                className="text-sm text-ivory/60 transition-colors hover:text-coral"
               >
                 {item}
               </a>

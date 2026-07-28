@@ -6,7 +6,7 @@ export function FocusedStrategy() {
     <section className="bg-parchment py-24 sm:py-32">
       <div className="mx-auto w-full max-w-4xl px-5 text-center sm:px-8">
         <Reveal y={30}>
-          <h2 className="mx-auto max-w-3xl text-balance font-serif text-4xl font-light leading-[1.05] tracking-[-0.02em] text-ink sm:text-6xl">
+          <h2 className="mx-auto max-w-3xl text-balance font-serif text-4xl font-normal leading-[1.05] tracking-[-0.02em] text-ink sm:text-6xl">
             A focused strategy creates a stronger position.
           </h2>
         </Reveal>
@@ -24,7 +24,7 @@ export function FocusedStrategy() {
 
         <Reveal delay={0.24} y={28}>
           <figure className="mx-auto mt-16 max-w-2xl border-t border-line pt-10">
-            <blockquote className="text-pretty font-serif text-xl font-light leading-snug text-ink/80 sm:text-2xl">
+            <blockquote className="text-pretty text-xl font-normal leading-snug text-ink/80 sm:text-2xl">
               When I know the market, I may already know where to begin. When I do not, Best
               Lawyers is one of the first places I look.
             </blockquote>

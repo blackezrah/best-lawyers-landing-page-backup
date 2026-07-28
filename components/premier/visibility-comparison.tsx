@@ -27,12 +27,12 @@ export function VisibilityComparison() {
       <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-5 py-24 sm:px-8 sm:py-32 max-md:min-h-0 max-md:py-28">
         <div className="max-w-md">
           <Reveal x={-34}>
-            <h2 className="font-serif text-2xl font-light tracking-tight text-ivory/80">
+            <h2 className="font-serif text-2xl font-normal tracking-tight text-ivory/80">
               Why position matters
             </h2>
           </Reveal>
           <Reveal delay={0.06} x={-30}>
-            <p className="mt-5 text-balance font-serif text-4xl font-light leading-[1.08] tracking-[-0.02em] text-ivory sm:text-5xl">
+            <p className="mt-5 text-balance font-serif text-4xl font-medium leading-[1.08] tracking-[-0.02em] text-ivory sm:text-5xl">
               Get seen before the list gets crowded.
             </p>
           </Reveal>

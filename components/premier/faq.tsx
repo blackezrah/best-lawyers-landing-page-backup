@@ -75,15 +75,15 @@ export function Faq() {
                   aria-expanded={isOpen}
                   aria-controls={answerId}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="group flex w-full items-center justify-between gap-6 py-6 text-left font-serif text-xl leading-snug tracking-tight text-ivory/90 transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-4 focus-visible:ring-offset-ink md:text-2xl"
+                  className="group flex w-full items-center justify-between gap-6 py-6 text-left font-serif text-xl leading-snug tracking-tight text-ivory/90 transition-colors hover:text-coral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral/60 focus-visible:ring-offset-4 focus-visible:ring-offset-ink md:text-2xl"
                 >
                   <span>{item.question}</span>
                   <span
                     aria-hidden="true"
                     className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition-colors ${
                       isOpen
-                        ? "border-gold bg-gold text-ink"
-                        : "border-ivory/20 text-ivory/60 group-hover:border-gold group-hover:text-gold"
+                        ? "border-coral bg-coral text-ivory"
+                        : "border-ivory/20 text-ivory/60 group-hover:border-coral group-hover:text-coral"
                     }`}
                   >
                     <svg

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#12100c',
+  themeColor: '#1A1F25',
 }
 
 export default function RootLayout({
@@ -25,12 +25,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  preload('/fonts/IBMPlexSerif-Regular.ttf', {
+  preload('/fonts/Gentleman-Regular.woff', {
     as: 'font',
-    type: 'font/ttf',
+    type: 'font/woff',
     crossOrigin: 'anonymous',
   })
-  preload('/fonts/IBMPlexSans-Regular.ttf', {
+  preload('/fonts/Gentleman-Light.woff', {
+    as: 'font',
+    type: 'font/woff',
+    crossOrigin: 'anonymous',
+  })
+  preload('/fonts/Optima-Regular.ttf', {
     as: 'font',
     type: 'font/ttf',
     crossOrigin: 'anonymous',

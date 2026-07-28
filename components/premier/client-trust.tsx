@@ -41,7 +41,7 @@ export function ClientTrust() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="max-w-md">
             <Reveal x={-32}>
-              <h2 className="text-balance font-serif text-4xl font-light leading-[1.05] tracking-[-0.02em] text-ink sm:text-5xl">
+              <h2 className="text-balance font-serif text-4xl font-normal leading-[1.05] tracking-[-0.02em] text-ink sm:text-5xl">
                 Where clients find lawyers they can trust.
               </h2>
             </Reveal>
@@ -67,7 +67,7 @@ export function ClientTrust() {
                   exit={{ opacity: 0, y: reduce ? 0 : -16 }}
                   transition={{ duration: reduce ? 0 : 0.5, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <blockquote className="text-balance font-serif text-2xl font-light leading-snug tracking-[-0.01em] text-ink sm:text-[2rem] sm:leading-[1.25]">
+                  <blockquote className="text-balance text-2xl font-normal leading-snug tracking-tight text-ink sm:text-[2rem] sm:leading-[1.25]">
                     {current.quote}
                   </blockquote>
                   <figcaption className="mt-7 text-base font-medium tracking-tight text-ink/70">
@@ -95,7 +95,7 @@ export function ClientTrust() {
                   <span
                     className={cn(
                       'font-serif text-sm tabular-nums transition-colors',
-                      i === active ? 'text-gold' : 'text-ink/35',
+                      i === active ? 'text-coral' : 'text-ink/35',
                     )}
                   >
                     {item.index}

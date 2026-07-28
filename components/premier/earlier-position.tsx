@@ -29,7 +29,7 @@ export function EarlierPosition() {
             <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/70">
               Premier Placement helps your profile stand out before buyers move down the list.
             </p>
-            <p className="mt-6 max-w-md border-l-2 border-gold pl-5 font-serif text-xl italic leading-relaxed text-ink/80">
+            <p className="mt-6 max-w-md border-l-2 border-gold-light pl-5 font-serif text-xl font-medium italic leading-relaxed text-ink/80">
               Recognition establishes credibility. Placement expands visibility.
             </p>
             <div className="mt-9">

@@ -26,7 +26,7 @@ export function Process() {
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <Reveal x={-32}>
-            <h2 className="text-balance font-serif text-4xl font-light leading-[1.05] tracking-[-0.02em] text-ink sm:text-6xl">
+            <h2 className="text-balance font-serif text-4xl font-normal leading-[1.05] tracking-[-0.02em] text-ink sm:text-6xl">
               A clear path to a top spot.
             </h2>
           </Reveal>
@@ -43,13 +43,13 @@ export function Process() {
               <div className="relative">
                 {/* Directional continuity: connecting rule with a node, no numbers */}
                 <div className="flex items-center gap-3">
-                  <span aria-hidden="true" className="h-2.5 w-2.5 shrink-0 rounded-full bg-gold" />
+                  <span aria-hidden="true" className="h-2.5 w-2.5 shrink-0 rounded-full bg-gold-light" />
                   <span
                     aria-hidden="true"
                     className={`h-px flex-1 bg-line ${i === STAGES.length - 1 ? 'lg:hidden' : ''}`}
                   />
                 </div>
-                <h3 className="mt-6 font-serif text-2xl font-light tracking-tight text-ink">
+                <h3 className="mt-6 font-serif text-2xl font-normal tracking-tight text-ink">
                   {stage.title}
                 </h3>
                 <p className="mt-3 max-w-[15rem] text-pretty text-base leading-relaxed text-muted-foreground">
@@ -63,7 +63,7 @@ export function Process() {
         <div className="mt-20 flex flex-col gap-10 border-t border-line pt-14 lg:flex-row lg:items-center lg:justify-between">
           <Reveal className="max-w-xl" x={-28}>
             <figure>
-              <blockquote className="text-pretty font-serif text-xl font-light leading-snug text-ink/80 sm:text-2xl">
+              <blockquote className="text-pretty text-xl font-normal leading-snug text-ink/80 sm:text-2xl">
                 Best Lawyers does not choose counsel for us. It helps our team identify and evaluate
                 the lawyers we may choose.
               </blockquote>

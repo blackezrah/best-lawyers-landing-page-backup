@@ -80,7 +80,7 @@ export function EngagementProgression() {
                   transition={{ duration: 0.6, delay: 0.15 + i * 0.18, ease: [0.22, 1, 0.36, 1] }}
                   className="relative flex flex-1 flex-col items-center text-center"
                 >
-                  <span className="relative z-10 flex h-[4.3rem] w-[4.3rem] items-center justify-center rounded-full border border-gold/30 bg-ink shadow-[0_0_0_6px_rgba(11,15,20,1)]">
+                  <span className="relative z-10 flex h-[4.3rem] w-[4.3rem] items-center justify-center rounded-full border border-gold/30 bg-ink shadow-[0_0_0_6px_rgba(26,31,37,1)]">
                     <span className="flex h-full w-full items-center justify-center rounded-full bg-gold/10">
                       <StageIcon name={stage.icon} />
                     </span>
@@ -88,7 +88,7 @@ export function EngagementProgression() {
                   <p className="mt-6 font-serif text-xl tracking-tight">{stage.label}</p>
                   <p className="mt-1.5 text-sm text-ivory/55">{stage.note}</p>
                   {i < STAGES.length - 1 && (
-                    <span aria-hidden="true" className="absolute right-[-0.6rem] top-[1.9rem] text-gold/60">
+                    <span aria-hidden="true" className="absolute right-[-0.6rem] top-[1.9rem] text-coral/80">
                       &rarr;
                     </span>
                   )}

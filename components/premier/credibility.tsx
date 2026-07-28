@@ -13,7 +13,7 @@ export function Credibility() {
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <Reveal x={-32}>
-            <h2 className="text-balance font-serif text-4xl font-light leading-[1.06] tracking-[-0.02em] text-ink sm:text-5xl">
+            <h2 className="text-balance font-serif text-4xl font-normal leading-[1.06] tracking-[-0.02em] text-ink sm:text-5xl">
               Recognition backed by decades of peer review.
             </h2>
           </Reveal>
@@ -29,7 +29,7 @@ export function Credibility() {
           {PROOF.map((item) => (
             <StaggerItem key={item.value} className="bg-ivory" x={-18}>
               <div className="flex h-full flex-col gap-3 px-7 py-10">
-                <span className="font-serif text-5xl font-light tracking-[-0.02em] text-ink">
+                <span className="font-serif text-5xl font-medium tracking-[-0.02em] text-ink">
                   {item.value}
                 </span>
                 <span className="text-sm leading-relaxed text-muted-foreground">{item.label}</span>

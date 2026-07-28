@@ -22,12 +22,12 @@ export function IntentionalPlacement() {
       <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl items-center px-5 py-24 sm:px-8 sm:py-32 max-md:min-h-0 max-md:py-28">
         <div className="max-w-md xl:max-w-xl">
           <Reveal x={-32}>
-            <h2 className="text-balance font-serif text-4xl font-light leading-[1.05] tracking-[-0.02em] text-ink sm:text-5xl">
+            <h2 className="text-balance font-serif text-4xl font-normal leading-[1.05] tracking-[-0.02em] text-ink sm:text-5xl">
               Make your profile harder to overlook.
             </h2>
           </Reveal>
           <Reveal delay={0.08} x={-24}>
-            <p className="mt-6 text-balance font-serif text-2xl font-light leading-snug text-ink/80 sm:text-3xl">
+            <p className="mt-6 text-balance font-serif text-2xl font-medium leading-snug text-ink/80 sm:text-3xl">
               Where your profile appears shapes who finds it.
             </p>
           </Reveal>
@@ -38,7 +38,7 @@ export function IntentionalPlacement() {
             </p>
           </Reveal>
           <Reveal delay={0.2} x={-18}>
-            <figure className="mt-12 border-l border-gold pl-6">
+            <figure className="mt-12 border-l border-gold-light pl-6">
               <blockquote className="text-pretty text-base leading-relaxed text-ink/75">
                 We did not know the firm before the search. Best Lawyers brought
                 <br />

@@ -6,7 +6,7 @@ function StatPanel({ stat, label, note }: { stat: string; label: string; note?: 
     <StaggerItem x={18} className="flex flex-col justify-between rounded-lg border border-line-dark/60 bg-ink-soft p-7">
       <Stars className="text-gold" />
       <div className="mt-8">
-        <p className="font-serif text-4xl tracking-tight text-ivory">{stat}</p>
+        <p className="font-serif text-4xl font-medium tracking-tight text-ivory">{stat}</p>
         <p className="mt-2 text-sm leading-relaxed text-ivory/60">{label}</p>
         {note && <p className="mt-1 text-xs tracking-tight text-gold/70">{note}</p>}
       </div>
@@ -19,7 +19,7 @@ function QuotePanel({ quote, attribution }: { quote: string; attribution: string
     <StaggerItem x={18} className="flex flex-col justify-between rounded-lg border border-line-dark/60 bg-ink-soft p-7">
       <Stars className="text-gold" />
       <div className="mt-6">
-        <p className="font-serif text-lg leading-relaxed text-ivory/90 text-pretty">{quote}</p>
+        <p className="text-lg font-normal leading-relaxed text-ivory/90 text-pretty">{quote}</p>
         <p className="mt-4 text-sm text-ivory/55">{attribution}</p>
       </div>
     </StaggerItem>
@@ -44,7 +44,7 @@ export function Validation() {
           {/* Featured large pull quote spanning two columns */}
           <StaggerItem x={-24} className="flex flex-col justify-between rounded-lg border border-gold/25 bg-gradient-to-br from-ink-soft to-ink p-8 md:col-span-2">
             <Stars className="text-gold" />
-            <p className="mt-6 font-serif text-2xl leading-snug text-ivory text-pretty md:text-3xl">
+            <p className="mt-6 font-serif text-2xl font-medium leading-snug text-ivory text-pretty md:text-3xl">
               The value went beyond adding another credential. Best Lawyers changed how clients saw our firm.
             </p>
             <p className="mt-6 text-sm text-ivory/55">Mitchell &amp; Associates</p>

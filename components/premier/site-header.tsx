@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 import { MEETING_URL } from './constants'
@@ -33,9 +34,14 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex h-[4.5rem] w-full max-w-7xl items-center justify-between px-5 sm:px-8">
         <a href="#main" className="flex items-center gap-3" aria-label="Best Lawyers Premier Placement, back to top">
-          <span className="font-serif text-xl tracking-tight text-ivory">
-            Best Lawyers<sup className="ml-[1px] align-super text-[0.5em] text-gold">&reg;</sup>
-          </span>
+          <Image
+            src="/best-lawyers-light-logo.webp"
+            alt="Best Lawyers"
+            width={434}
+            height={88}
+            priority
+            className="h-auto w-[8.4rem] sm:w-[9.6rem]"
+          />
         </a>
 
         <nav aria-label="Primary" className="hidden items-center gap-9 lg:flex">

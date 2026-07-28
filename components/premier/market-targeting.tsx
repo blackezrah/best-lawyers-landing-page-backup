@@ -39,7 +39,7 @@ export function MarketTargeting() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="max-w-md">
             <Reveal x={-32}>
-              <h2 className="text-balance font-serif text-4xl font-light leading-[1.05] tracking-[-0.02em] sm:text-5xl">
+              <h2 className="text-balance font-serif text-4xl font-normal leading-[1.05] tracking-[-0.02em] sm:text-5xl">
                 Choose the market your firm wants to win.
               </h2>
             </Reveal>
@@ -67,10 +67,10 @@ export function MarketTargeting() {
               <div className="divide-y divide-line-dark/40">
                 {SELECTIONS.map((sel) => (
                   <div key={sel.label} className="p-7 sm:p-8">
-                    <div className="text-sm font-medium uppercase tracking-[0.12em] text-ivory/45">
+                    <div className="text-sm font-semibold uppercase tracking-[0.12em] text-ivory/45">
                       {sel.label}
                     </div>
-                    <div className="mt-3 font-serif text-2xl font-light tracking-tight text-ivory">
+                    <div className="mt-3 font-serif text-2xl font-medium tracking-tight text-ivory">
                       {sel.value}
                     </div>
                     <div className="mt-5 flex flex-wrap gap-x-7 gap-y-2">
@@ -82,7 +82,7 @@ export function MarketTargeting() {
                 ))}
 
                 <div className="p-7 sm:p-8">
-                  <div className="text-sm font-medium uppercase tracking-[0.12em] text-ivory/45">
+                  <div className="text-sm font-semibold uppercase tracking-[0.12em] text-ivory/45">
                     Placement goal
                   </div>
                   <div className="mt-3 text-pretty text-lg leading-relaxed text-ivory/85">
@@ -96,7 +96,7 @@ export function MarketTargeting() {
 
         <div className="mt-16 grid grid-cols-1 gap-14 border-t border-line-dark/40 pt-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <Reveal x={-32}>
-            <p className="max-w-xl text-pretty font-serif text-xl font-light leading-snug text-ivory/85 sm:text-2xl">
+            <p className="max-w-xl text-pretty font-serif text-xl font-medium leading-snug text-ivory/85 sm:text-2xl">
               Once approved, your profile is placed in the Premier area. You do not have to wait for
               the standard list to move.
             </p>
@@ -128,7 +128,7 @@ export function MarketTargeting() {
 
         <div className="mt-20 flex flex-col items-start gap-8 border-t border-line-dark/40 pt-14 sm:flex-row sm:items-center sm:justify-between">
           <Reveal x={-24}>
-            <p className="text-balance font-serif text-3xl font-light tracking-[-0.01em] text-ivory sm:text-4xl">
+            <p className="text-balance font-serif text-3xl font-medium tracking-[-0.01em] text-ivory sm:text-4xl">
               Choose where you want to lead.
             </p>
           </Reveal>

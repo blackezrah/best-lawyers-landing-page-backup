@@ -15,7 +15,7 @@ export function ReviewExample() {
         <Reveal y={30}>
           <div className="overflow-hidden rounded-2xl border border-line-dark/50 bg-ink-soft/30">
             <div className="flex items-center justify-between border-b border-line-dark/40 px-8 py-6">
-              <span className="font-serif text-xl font-light tracking-tight text-ivory">
+              <span className="font-serif text-xl font-normal tracking-tight text-ivory">
                 Placement Review
               </span>
               <span className="inline-flex items-center gap-2 text-sm tracking-tight text-ivory/60">
@@ -30,7 +30,7 @@ export function ReviewExample() {
                   key={row.label}
                   className="flex items-center justify-between gap-6 px-8 py-5"
                 >
-                  <dt className="text-sm uppercase tracking-[0.12em] text-ivory/45">
+                  <dt className="text-sm font-semibold uppercase tracking-[0.12em] text-ivory/45">
                     {row.label}
                   </dt>
                   <dd className="text-right text-base tracking-tight text-ivory/90">
