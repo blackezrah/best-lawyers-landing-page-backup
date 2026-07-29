@@ -1,5 +1,6 @@
 import { Reveal, Stagger, StaggerItem } from "./reveal"
 import { Stars } from "./stars"
+import { CtaButton } from "./cta-button"
 
 function StatPanel({ stat, label, note }: { stat: string; label: string; note?: string }) {
   return (
@@ -47,43 +48,46 @@ export function Validation() {
             <p className="mt-6 font-serif text-2xl font-medium leading-snug text-ivory text-pretty md:text-3xl">
               The value went beyond adding another credential. Best Lawyers changed how clients saw our firm.
             </p>
-            <p className="mt-6 text-sm text-ivory/55">Mitchell &amp; Associates</p>
+            <p className="mt-6 text-sm text-ivory/55">Anonymous in-house counsel</p>
           </StaggerItem>
 
           <StatPanel stat="97%" label="Would recommend Best Lawyers" note="Client trust" />
 
           <QuotePanel
             quote="When the legal need is significant, Best Lawyers is one of the first places we look to identify firms that fit our needs."
-            attribution="Anonymous Client"
+            attribution="Anonymous evaluation team"
           />
           <QuotePanel
             quote="Some of the strongest firms we've considered weren't previously on our radar. Best Lawyers has helped us identify attorneys we may have otherwise overlooked."
-            attribution="Anonymous Client"
+            attribution="Anonymous evaluation team"
           />
           <StatPanel stat="13M+" label="peer evaluations" note="Scale" />
 
           <StatPanel stat="151" label="practice areas" note="Market reach" />
           <QuotePanel
             quote="A Best Lawyers recognition immediately tells us a firm belongs in the conversation."
-            attribution="Anonymous Client"
+            attribution="Anonymous evaluation team"
           />
           <QuotePanel
             quote="We don't have time to evaluate every firm. Best Lawyers helps us focus on the strongest candidates."
-            attribution="Anonymous Client"
+            attribution="Anonymous evaluation team"
           />
 
           <StatPanel stat="40+" label="years of trust" note="Since 1983" />
           <QuotePanel
             quote="Recognition helps determine who makes our initial shortlist. From there, we evaluate experience, fit, and the needs of the engagement before making a final decision."
-            attribution="Anonymous Client"
+            attribution="Anonymous evaluation team"
           />
           <QuotePanel
             quote="Best Lawyers is one of the resources we use to compare potential legal partners before selecting outside counsel."
-            attribution="Doll Distributing"
+            attribution="Anonymous evaluation team"
           />
 
           <StatPanel stat="28K+" label="recognized lawyers" />
         </Stagger>
+        <div className="mt-12 flex justify-center">
+          <CtaButton variant="gold" />
+        </div>
       </div>
     </section>
   )

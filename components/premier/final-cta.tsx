@@ -22,10 +22,10 @@ export function FinalCta() {
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-4xl items-center justify-center px-6 py-24 text-center md:py-32 max-md:min-h-[70svh]">
           <Reveal y={34}>
             <h2 className="font-serif text-5xl leading-[1.02] tracking-tight text-balance md:text-7xl">
-              Visibility shapes opportunity.
+              Stand above your competition.
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ivory/70 md:text-xl">
-              Help more prospective clients find your practice.
+              Position your firm where high-intent prospective clients begin their search and make sure your profile is seen before standard organic listings.
             </p>
             <div className="mt-10 flex justify-center">
               <CtaButton variant="gold" />

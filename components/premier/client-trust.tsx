@@ -9,24 +9,24 @@ import { CtaButton } from './cta-button'
 const SEQUENCE = [
   {
     index: '01',
-    nav: 'Aronberg Goldgehn',
+    nav: 'Anonymous overview',
     quote:
       'Best Lawyers is more than a directory we glance at. It is a trusted reference we use when reviewing lawyers and law firms.',
-    attribution: 'Aronberg Goldgehn',
+    attribution: 'Anonymous evaluation team',
   },
   {
     index: '02',
-    nav: 'Banner Metals Group',
+    nav: 'Anonymous review',
     quote:
       'Best Lawyers and Best Law Firms do not make the decision for us. They help us identify and narrow the legal partners we consider.',
-    attribution: 'Banner Metals Group, Inc.',
+    attribution: 'Anonymous evaluation team',
   },
   {
     index: '03',
-    nav: 'ABG Lab',
+    nav: 'Anonymous shortlist',
     quote:
       'The rankings do not decide whom we hire. They help determine which lawyers receive a closer look.',
-    attribution: 'ABG Lab, LLC',
+    attribution: 'Anonymous evaluation team',
   },
 ]
 

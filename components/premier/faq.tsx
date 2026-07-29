@@ -22,11 +22,6 @@ const FAQS = [
       "Once eligibility, market availability, and the placement details are confirmed, the profile can move into its Premier position. Exact timing depends on final setup and approval, and your Best Lawyers representative will confirm the expected launch date.",
   },
   {
-    question: "What can I track?",
-    answer:
-      "Available reporting may include profile visibility, profile visits, clicks, website traffic, and downstream lead activity. Reporting and attribution options vary by account setup and implementation, and the Best Lawyers team will confirm what is available for your placement.",
-  },
-  {
     question: "What if my first market is full?",
     answer:
       "If all Premier positions are already taken in your first-choice market and practice area, the Best Lawyers team can help evaluate another relevant metro, practice area, or search context that aligns with your objectives. No alternative placement should be selected without your approval.",

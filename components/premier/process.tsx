@@ -7,16 +7,16 @@ const STAGES = [
     body: 'Choose the city and practice area that matter most.',
   },
   {
-    title: 'Check fit and open spots',
-    body: 'Best Lawyers checks your profile and current space.',
+    title: 'Confirm eligibility',
+    body: 'Best Lawyers verifies your recognition and available Premier Placement inventory.',
   },
   {
-    title: 'Turn on the placement',
-    body: 'Once approved, your profile moves into a Premier spot.',
+    title: 'Secure the position',
+    body: 'Once approved, your profile takes one of the available Premier Placement slots.',
   },
   {
-    title: 'Track the response',
-    body: 'Review visits, clicks, and lead activity.',
+    title: 'Share with confidence',
+    body: 'Use the placement in the approved market with the appropriate disclosure language.',
   },
 ]
 
@@ -68,7 +68,7 @@ export function Process() {
                 the lawyers we may choose.
               </blockquote>
               <figcaption className="mt-4 text-sm font-medium tracking-tight text-ink/50">
-                United HomeCare
+                Anonymous procurement team
               </figcaption>
             </figure>
           </Reveal>

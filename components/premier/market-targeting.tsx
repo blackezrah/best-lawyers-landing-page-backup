@@ -55,7 +55,7 @@ export function MarketTargeting() {
                   Lawyers becomes especially useful.
                 </blockquote>
                 <figcaption className="mt-3 text-sm font-medium tracking-tight text-ivory/50">
-                  Cabot Oil &amp; Gas
+                  Anonymous evaluation leader
                 </figcaption>
               </figure>
             </Reveal>
@@ -97,8 +97,7 @@ export function MarketTargeting() {
         <div className="mt-16 grid grid-cols-1 gap-14 border-t border-line-dark/40 pt-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <Reveal x={-32}>
             <p className="max-w-xl text-pretty font-serif text-xl font-medium leading-snug text-ivory/85 sm:text-2xl">
-              Once approved, your profile is placed in the Premier area. You do not have to wait for
-              the standard list to move.
+              Once approved, your profile enters a Premier position in the market and practice area you selected.
             </p>
             <figure className="mt-10 border-l border-gold/40 pl-6">
               <blockquote className="max-w-lg text-pretty text-base leading-relaxed text-ivory/75">

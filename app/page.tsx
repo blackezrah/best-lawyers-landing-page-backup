@@ -12,7 +12,6 @@ import { ReviewExample } from "@/components/premier/review-example"
 import { RecognitionVsPlacement } from "@/components/premier/recognition-vs-placement"
 import { Process } from "@/components/premier/process"
 import { EngagementProgression } from "@/components/premier/engagement-progression"
-import { EarlierPosition } from "@/components/premier/earlier-position"
 import { Validation } from "@/components/premier/validation"
 import { Faq } from "@/components/premier/faq"
 import { FinalCta } from "@/components/premier/final-cta"
@@ -29,11 +28,11 @@ export default function Page() {
       <SiteHeader />
       <main id="main">
         <Hero />
+        <VisibilityComparison />
+        <PositionAdvantage />
         <Credibility />
         <TrustStrip />
         <ClientTrust />
-        <PositionAdvantage />
-        <VisibilityComparison />
         <IntentionalPlacement />
         <MarketTargeting />
         <FocusedStrategy />
@@ -41,7 +40,6 @@ export default function Page() {
         <RecognitionVsPlacement />
         <Process />
         <EngagementProgression />
-        <EarlierPosition />
         <Validation />
         <Faq />
       </main>

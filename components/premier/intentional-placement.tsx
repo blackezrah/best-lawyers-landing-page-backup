@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Reveal } from './reveal'
+import { CtaButton } from './cta-button'
 
 export function IntentionalPlacement() {
   return (
@@ -33,8 +34,7 @@ export function IntentionalPlacement() {
           </Reveal>
           <Reveal delay={0.14} x={-20}>
             <p className="mt-6 max-w-lg text-pretty text-lg leading-relaxed text-muted-foreground">
-              Premier Placement is designed to create a clear advantage without competing for
-              attention everywhere at once.
+              Premier Placement is designed to create a clear advantage without competing with standard organic listings.
             </p>
           </Reveal>
           <Reveal delay={0.2} x={-18}>
@@ -48,6 +48,11 @@ export function IntentionalPlacement() {
                 Anonymous Client
               </figcaption>
             </figure>
+          </Reveal>
+          <Reveal delay={0.28} x={-18}>
+            <div className="mt-10">
+              <CtaButton variant="gold" />
+            </div>
           </Reveal>
         </div>
       </div>

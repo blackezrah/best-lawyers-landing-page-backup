@@ -1,37 +1,23 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { MEETING_URL } from './constants'
+import { useHubspotModal } from './hubspot-modal'
 
 const NAV = [
   { label: 'Why Premier', href: '#why-premier' },
-  { label: 'How It Works', href: '#how-it-works' },
   { label: 'Client Trust', href: '#client-trust' },
+  { label: 'How It Works', href: '#how-it-works' },
   { label: 'FAQ', href: '#faq' },
 ]
 
 export function SiteHeader() {
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  const { openModal } = useHubspotModal()
 
   return (
-    <header
-      className={cn(
-        'fixed inset-x-0 top-0 z-50 transition-colors duration-500',
-        scrolled
-          ? 'border-b border-line-dark/40 bg-ink/85 backdrop-blur-md'
-          : 'border-b border-transparent bg-transparent',
-      )}
-    >
+    <header className="sticky top-0 z-50 border-b border-line-dark/40 bg-ink/95 backdrop-blur-xl">
       <div className="mx-auto flex h-[4.5rem] w-full max-w-7xl items-center justify-between px-5 sm:px-8">
         <a
           href="https://www.bestlawyers.com"
@@ -47,9 +33,7 @@ export function SiteHeader() {
             height={88}
             priority
             className="h-auto w-[8.4rem] sm:w-[9.6rem]"
-            // Increase brightness so the logo appears white on transparent backgrounds.
-            // Replace with a proper white variant of the logo file if supplied.
-            style={{ filter: 'brightness(2) saturate(1.2)' }}
+            style={{ filter: 'brightness(2.3) saturate(1.3)' }}
           />
         </a>
 
@@ -58,19 +42,18 @@ export function SiteHeader() {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium tracking-tight text-ivory/70 transition-colors hover:text-ivory"
+              className="text-sm font-medium tracking-tight text-ivory transition-colors hover:text-ivory"
             >
               {item.label}
             </a>
           ))}
-          <a
-            href={MEETING_URL}
-            target="_top"
-            rel="noopener noreferrer"
-            className="rounded-full border border-gold/60 px-5 py-2 text-sm font-medium tracking-tight text-gold transition-colors hover:bg-gold hover:text-ink"
+          <button
+            type="button"
+            onClick={openModal}
+            className="rounded-full border border-gold/60 bg-gold text-ink px-5 py-2 text-sm font-medium tracking-tight transition-colors hover:bg-gold-soft"
           >
-            Check Market Availability
-          </a>
+            Claim Your Premier Placement
+          </button>
         </nav>
 
         <button
@@ -99,14 +82,16 @@ export function SiteHeader() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={MEETING_URL}
-              target="_top"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => {
+                setMenuOpen(false)
+                openModal()
+              }}
               className="mt-2 rounded-full border border-gold/60 px-3 py-3 text-center text-base font-medium text-gold"
             >
-              Check Market Availability
-            </a>
+              Claim Your Premier Placement
+            </button>
           </nav>
         </div>
       )}

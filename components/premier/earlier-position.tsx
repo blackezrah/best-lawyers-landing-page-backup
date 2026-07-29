@@ -27,7 +27,7 @@ export function EarlierPosition() {
               Be considered first.
             </h2>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/70">
-              Premier Placement helps your profile stand out before buyers move down the list.
+              Premier Placement helps your profile appear before standard organic listings.
             </p>
             <p className="mt-6 max-w-md border-l-2 border-gold-light pl-5 font-serif text-xl font-medium italic leading-relaxed text-ink/80">
               Recognition establishes credibility. Placement expands visibility.

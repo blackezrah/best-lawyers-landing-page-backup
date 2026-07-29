@@ -28,7 +28,7 @@ export function Hero() {
       {/* Navy/charcoal gradient at the top to improve contrast behind the fixed header.
           Increased height so the fade reaches lower into the hero. */}
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-30 h-56 sm:h-72">
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/95 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/100 to-transparent" />
       </div>
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 max-md:hidden">
         <motion.div
@@ -64,17 +64,25 @@ export function Hero() {
             transition={{ duration: 0.9, ease }}
             className="text-balance font-serif text-[2.7rem] font-light leading-[1.04] tracking-[-0.02em] sm:text-6xl lg:text-[4.75rem]"
           >
-            The right position starts the right conversations.
+            Be found first.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.12, ease }}
-            className="mt-7 max-w-md text-pretty text-lg leading-relaxed text-ivory/70"
+            className="mt-8 font-serif text-3xl font-semibold tracking-tight text-gold sm:text-4xl"
           >
-            Premier Placement helps clients discover your practice earlier in their search for
-            legal counsel.
+            Premier Placement
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: reduce ? 0 : 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.18, ease }}
+            className="mt-6 max-w-xl text-[1.05rem] leading-[1.75] text-ivory/85 sm:text-xl"
+          >
+            Be found first by high-intent prospective clients searching for a leading lawyer in your metro and practice area.
           </motion.p>
 
           <motion.div
@@ -86,20 +94,21 @@ export function Hero() {
             <CtaButton variant="gold" />
           </motion.div>
 
-          <motion.figure
+          <motion.div
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.36, ease }}
-            className="mt-12 max-w-md border-l border-gold/40 pl-6"
+            className="mt-14 grid gap-5 sm:grid-cols-2"
           >
-            <blockquote className="text-pretty text-base leading-relaxed text-ivory/80">
-              Best Lawyers is not a resource we turn to only after a shortlist is built. They are
-              among the places we start when reviewing a lawyer or firm.
-            </blockquote>
-            <figcaption className="mt-3 text-sm font-medium tracking-tight text-ivory/60">
-              Gorden, Wolf &amp; Carney, Chtd.
-            </figcaption>
-          </motion.figure>
+            <div className="rounded-3xl border border-gold/40 bg-white/5 p-8">
+              <p className="font-serif text-6xl font-medium tracking-[-0.03em] text-gold">75%</p>
+              <p className="mt-4 text-base leading-relaxed text-ivory/75">of clients contact only one lawyer.</p>
+            </div>
+            <div className="rounded-3xl border border-gold/40 bg-white/5 p-8">
+              <p className="font-serif text-6xl font-medium tracking-[-0.03em] text-gold">1 in 4</p>
+              <p className="mt-4 text-base leading-relaxed text-ivory/75">profile viewers click through to a firm’s website.</p>
+            </div>
+          </motion.div>
         </div>
       </div>
 

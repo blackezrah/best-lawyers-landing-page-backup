@@ -29,7 +29,7 @@ export function FocusedStrategy() {
               Lawyers is one of the first places I look.
             </blockquote>
             <figcaption className="mt-4 text-sm font-medium tracking-tight text-ink/50">
-              EPIC Brokers
+              Anonymous market leader
             </figcaption>
           </figure>
         </Reveal>

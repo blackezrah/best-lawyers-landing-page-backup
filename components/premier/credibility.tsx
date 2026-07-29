@@ -1,4 +1,5 @@
 import { Reveal, Stagger, StaggerItem } from './reveal'
+import { CtaButton } from './cta-button'
 
 const PROOF = [
   { value: 'Top 5%', label: 'of lawyers awarded in the U.S.' },
@@ -22,6 +23,11 @@ export function Credibility() {
               Premier Placement helps recognized lawyers stand out where clients are already
               evaluating counsel.
             </p>
+          </Reveal>
+          <Reveal delay={0.16} x={-24}>
+            <div className="mt-12">
+              <CtaButton variant="ink" />
+            </div>
           </Reveal>
         </div>
 

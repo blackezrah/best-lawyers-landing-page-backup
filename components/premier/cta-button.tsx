@@ -1,9 +1,9 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { MEETING_URL } from './constants'
+import { useHubspotModal } from './hubspot-modal'
 
-const CTA_LABEL = 'Schedule a Conversation'
+const CTA_LABEL = 'Claim Your Premier Placement'
 
 type CtaButtonProps = {
   variant?: 'gold' | 'ink' | 'outline' | 'ivory'
@@ -13,6 +13,7 @@ type CtaButtonProps = {
 }
 
 export function CtaButton({ variant = 'gold', size = 'lg', className, fullWidth }: CtaButtonProps) {
+  const { openModal } = useHubspotModal()
   const base =
     'group inline-flex items-center justify-center gap-2.5 font-sans font-medium tracking-tight transition-all duration-300 rounded-full'
   const sizes = {
@@ -29,10 +30,9 @@ export function CtaButton({ variant = 'gold', size = 'lg', className, fullWidth 
   }
 
   return (
-    <a
-      href={MEETING_URL}
-      target="_top"
-      rel="noopener noreferrer"
+    <button
+      type="button"
+      onClick={openModal}
       className={cn(base, sizes[size], variants[variant], fullWidth && 'w-full', className)}
     >
       <span>{CTA_LABEL}</span>
@@ -48,6 +48,6 @@ export function CtaButton({ variant = 'gold', size = 'lg', className, fullWidth 
       >
         <path d="M5 12h14M13 6l6 6-6 6" />
       </svg>
-    </a>
+    </button>
   )
 }

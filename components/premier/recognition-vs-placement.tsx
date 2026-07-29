@@ -55,10 +55,10 @@ export function RecognitionVsPlacement() {
             <Reveal delay={0.06} x={28}>
               <article className="flex h-full flex-col rounded-2xl border border-line bg-card p-8">
                 <h3 className="font-serif text-xl font-normal tracking-tight text-ink">
-                  Paid Premier spot
+                  Premier Placement access
                 </h3>
                 <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
-                  Eligible lawyers can pay for a priority spot in one market and practice area.
+                  Eligible profiles can secure one of the five Premier Placement positions in the chosen market and practice area.
                 </p>
                 <div className="flex-1" />
                 <CardLabel>Intentional distribution</CardLabel>
@@ -87,7 +87,7 @@ export function RecognitionVsPlacement() {
                 that Best Lawyers recognition is earned.
               </blockquote>
               <figcaption className="mt-4 text-sm font-medium tracking-tight text-ink/50">
-                Orland School District 135
+                Anonymous selection committee
               </figcaption>
             </figure>
           </Reveal>

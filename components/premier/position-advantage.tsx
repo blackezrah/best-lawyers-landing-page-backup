@@ -18,12 +18,15 @@ export function PositionAdvantage() {
         <div className="max-w-3xl">
           <Reveal x={-32}>
             <h2 className="text-balance font-serif text-4xl font-normal leading-[1.04] tracking-[-0.02em] sm:text-6xl">
-              Be the first to stand out.
+              Place Yourself Ahead
             </h2>
           </Reveal>
           <Reveal delay={0.08} x={-24}>
             <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-ivory/70">
-              See how a Premier spot can move an eligible profile ahead of standard results.
+              With Best Lawyers Premier Placement, your profile can appear within the top five positions, ensuring you are seen by prospective clients searching for a leading lawyer in your metro and practice area.
+            </p>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-ivory/60">
+              Premier Placement appears above standard organic listings to help your eligible profile stand ahead of the broader search field.
             </p>
           </Reveal>
         </div>
