@@ -9,6 +9,21 @@ Remaining framework-specific features to replace during an Instapage migration:
 - Tailwind CSS classes: compile the final CSS and include only the generated styles needed by the landing page.
 - `motion/react`: replace reveal, scroll, and testimonial transitions with small vanilla JavaScript and CSS transitions, or omit motion where Instapage support is limited.
 
+- Landing page CTA handling now reads an iframe query parameter named `meeting_url` and opens the meeting link with `target="_top"`.
+
+Instapage forwarding snippet:
+```html
+<script>
+  var meetingUrl = new URLSearchParams(window.location.search).get('meeting_url')
+  if (meetingUrl) {
+    var target = document.querySelector('a[href*="meetings.hubspot.com"]')
+    if (target) {
+      target.href = meetingUrl
+    }
+  }
+</script>
+```
+
 Portable assets:
 
 - `public/best-lawyers-hero.webp`

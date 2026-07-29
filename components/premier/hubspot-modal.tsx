@@ -237,7 +237,7 @@ export function HubspotModalProvider({ children }: HubspotModalProviderProps) {
                 </button>
                 <div className="px-6 py-8 sm:px-10 sm:py-10">
                   <h2 id="hubspot-modal-title" className="text-balance font-serif text-3xl font-normal tracking-[-0.02em] text-ink sm:text-4xl">
-                    Schedule a meeting to claim your Premier Placement
+                    Schedule a meeting to check market availability
                   </h2>
                   <p className="mt-3 max-w-2xl text-base leading-relaxed text-ink/70 sm:text-lg">
                     Complete the form below and we’ll connect you with the team that can help activate your Premier Placement.

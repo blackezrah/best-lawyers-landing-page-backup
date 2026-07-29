@@ -2,8 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { cn } from '@/lib/utils'
-import { useHubspotModal } from './hubspot-modal'
+import { useMeetingUrl } from '@/lib/use-meeting-url'
 
 const NAV = [
   { label: 'Why Premier', href: '#why-premier' },
@@ -14,7 +13,7 @@ const NAV = [
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const { openModal } = useHubspotModal()
+  const meetingUrl = useMeetingUrl()
 
   return (
     <header className="sticky top-0 z-50 border-b border-line-dark/40 bg-ink/95 backdrop-blur-xl">
@@ -47,13 +46,14 @@ export function SiteHeader() {
               {item.label}
             </a>
           ))}
-          <button
-            type="button"
-            onClick={openModal}
+          <a
+            href={meetingUrl}
+            target="_top"
+            rel="noopener noreferrer"
             className="rounded-full border border-gold/60 bg-gold text-ink px-5 py-2 text-sm font-medium tracking-tight transition-colors hover:bg-gold-soft"
           >
-            Claim Your Premier Placement
-          </button>
+            Check Market Availability
+          </a>
         </nav>
 
         <button
@@ -82,16 +82,15 @@ export function SiteHeader() {
                 {item.label}
               </a>
             ))}
-            <button
-              type="button"
-              onClick={() => {
-                setMenuOpen(false)
-                openModal()
-              }}
+            <a
+              href={meetingUrl}
+              target="_top"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
               className="mt-2 rounded-full border border-gold/60 px-3 py-3 text-center text-base font-medium text-gold"
             >
-              Claim Your Premier Placement
-            </button>
+              Check Market Availability
+            </a>
           </nav>
         </div>
       )}

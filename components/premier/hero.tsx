@@ -94,21 +94,22 @@ export function Hero() {
             <CtaButton variant="gold" />
           </motion.div>
 
-          <motion.div
+          <motion.figure
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.36, ease }}
-            className="mt-14 grid gap-5 sm:grid-cols-2"
+            transition={{ duration: 0.9, delay: 0.32, ease }}
+            className="mt-14 max-w-2xl text-left text-ivory"
           >
-            <div className="rounded-3xl border border-gold/40 bg-white/5 p-8">
-              <p className="font-serif text-6xl font-medium tracking-[-0.03em] text-gold">75%</p>
-              <p className="mt-4 text-base leading-relaxed text-ivory/75">of clients contact only one lawyer.</p>
-            </div>
-            <div className="rounded-3xl border border-gold/40 bg-white/5 p-8">
-              <p className="font-serif text-6xl font-medium tracking-[-0.03em] text-gold">1 in 4</p>
-              <p className="mt-4 text-base leading-relaxed text-ivory/75">profile viewers click through to a firm’s website.</p>
-            </div>
-          </motion.div>
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-gold/85">
+              Client testimonial
+            </p>
+            <blockquote className="mt-5 text-2xl font-medium leading-[1.45] tracking-[-0.02em] text-ivory sm:text-[2.2rem]">
+              “Premier Placement finally got our firm discovered by the right clients in the right markets.”
+            </blockquote>
+            <figcaption className="mt-6 text-sm font-semibold uppercase tracking-[0.28em] text-gold/85 sm:text-base">
+              Rookridge Law Firm
+            </figcaption>
+          </motion.figure>
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 import { SiteHeader } from "@/components/premier/site-header"
 import { Hero } from "@/components/premier/hero"
+import { BrandLogos } from "@/components/premier/brand-logos"
 import { PositionAdvantage } from "@/components/premier/position-advantage"
 import { VisibilityComparison } from "@/components/premier/visibility-comparison"
 import { TrustStrip } from "@/components/premier/trust-strip"
@@ -22,6 +23,7 @@ export default function Page() {
       <SiteHeader />
       <main id="main">
           <Hero />
+          <BrandLogos />
         <VisibilityComparison />
         <PositionAdvantage />
         <TrustStrip />

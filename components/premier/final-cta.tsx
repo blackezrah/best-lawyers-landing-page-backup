@@ -30,7 +30,6 @@ export function FinalCta() {
             <div className="mt-10 flex justify-center">
               <CtaButton variant="gold" />
             </div>
-            <p className="mt-10 font-serif text-3xl leading-none text-coral">→</p>
           </Reveal>
         </div>
       </section>

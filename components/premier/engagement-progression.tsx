@@ -52,16 +52,16 @@ export function EngagementProgression() {
   return (
     <section className="relative overflow-hidden bg-ink py-24 text-ivory md:py-36">
       <div className="mx-auto max-w-6xl px-6">
-        <Reveal x={-32}>
-          <h2 className="max-w-2xl font-serif text-4xl leading-[1.05] tracking-tight text-balance md:text-5xl">
+        <Reveal x={-32} className="mx-auto max-w-3xl text-center">
+          <h2 className="font-serif text-4xl leading-[1.05] tracking-tight text-balance md:text-5xl">
             See how visibility turns into engagement.
           </h2>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-ivory/70">
+          <p className="mt-5 text-lg leading-relaxed text-ivory/70">
             The goal is simple: help more ready buyers find your profile and take the next step.
           </p>
         </Reveal>
         <div className="mt-16 hidden md:block">
-          <div className="relative flex items-stretch justify-between gap-4">
+          <div className="relative mx-auto flex max-w-5xl flex-wrap items-stretch justify-center gap-6">
             <motion.span
               aria-hidden="true"
               initial={{ scaleX: 0 }}
@@ -78,7 +78,7 @@ export function EngagementProgression() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-120px" }}
                   transition={{ duration: 0.6, delay: 0.15 + i * 0.18, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative flex flex-1 flex-col items-center text-center"
+                  className="relative flex min-w-[13rem] max-w-[14rem] flex-col items-center text-center"
                 >
                   <span className="relative z-10 flex h-[4.3rem] w-[4.3rem] items-center justify-center rounded-full border border-gold/30 bg-ink shadow-[0_0_0_6px_rgba(26,31,37,1)]">
                     <span className="flex h-full w-full items-center justify-center rounded-full bg-gold/10">
@@ -87,11 +87,7 @@ export function EngagementProgression() {
                   </span>
                   <p className="mt-6 font-serif text-xl tracking-tight">{stage.label}</p>
                   <p className="mt-1.5 text-sm text-ivory/55">{stage.note}</p>
-                  {i < STAGES.length - 1 && (
-                    <span aria-hidden="true" className="absolute right-[-0.6rem] top-[1.9rem] text-coral/80">
-                      &rarr;
-                    </span>
-                  )}
+
                 </motion.div>
               )
             })}
@@ -116,7 +112,7 @@ export function EngagementProgression() {
           })}
         </div>
 
-        <Reveal delay={0.1} x={24} className="mt-16">
+        <Reveal delay={0.1} x={24} className="mt-16 flex w-full justify-center">
           <CtaButton variant="gold" />
         </Reveal>
       </div>
