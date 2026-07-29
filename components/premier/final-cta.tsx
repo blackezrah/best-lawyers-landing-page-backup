@@ -25,7 +25,7 @@ export function FinalCta() {
               Stand above your competition.
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ivory/70 md:text-xl">
-              Position your firm where high-intent prospective clients begin their search and make sure your profile is seen before standard organic listings.
+              Position your firm where high-intent prospective clients begin their search and make sure your profile is seen by the right audience.
             </p>
             <div className="mt-10 flex justify-center">
               <CtaButton variant="gold" />

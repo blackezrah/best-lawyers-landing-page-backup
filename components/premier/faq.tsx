@@ -7,34 +7,24 @@ import { CtaButton } from "./cta-button"
 
 const FAQS = [
   {
-    question: "Who can get Premier Placement?",
+    question: "How many Premier placements are available?",
     answer:
-      "Premier Placement is available to lawyers who are currently recognized by Best Lawyers and have an eligible profile in the selected market and practice area. It does not create recognition, change tier rankings, or influence recognition outcomes. It adds priority visibility above standard directory listings. Eligibility and availability are confirmed before activation.",
+      "Only five Premier placements are available in each market and practice area. That keeps placement intentional and focused on the most relevant search results.",
   },
   {
-    question: "How are markets and practice areas set?",
+    question: "What happens if my first market is full?",
     answer:
-      "Each placement is tied to one specific metro and one specific practice area, matching the search context prospective clients use when looking for counsel. Only five Premier positions are available per metro and practice area. You select the market and practice area you want to prioritize, and the Best Lawyers team confirms eligibility and availability.",
+      "If the first-choice market is full, the Best Lawyers team will help you identify another relevant metro or practice area that still matches your visibility objective.",
   },
   {
-    question: "How fast can it go live?",
+    question: "Who qualifies for Premier Placement?",
     answer:
-      "Once eligibility, market availability, and the placement details are confirmed, the profile can move into its Premier position. Exact timing depends on final setup and approval, and your Best Lawyers representative will confirm the expected launch date.",
+      "Premier Placement is available to lawyers already recognized by Best Lawyers in the selected metro and practice area. It applies priority placement to earned recognition, not a new award.",
   },
   {
-    question: "What if my first market is full?",
+    question: "How are the market and practice area selected?",
     answer:
-      "If all Premier positions are already taken in your first-choice market and practice area, the Best Lawyers team can help evaluate another relevant metro, practice area, or search context that aligns with your objectives. No alternative placement should be selected without your approval.",
-  },
-  {
-    question: "How do price, term, and renewal work?",
-    answer:
-      "Pricing and contract terms depend on the selected market, practice area, available inventory, and placement package. The exact price, term, and renewal conditions are provided before activation and documented in your agreement. Renewal is handled according to those agreed terms.",
-  },
-  {
-    question: "Need help choosing the right market?",
-    answer:
-      "Share the metro, practice area, and visibility objective you want to prioritize. The Best Lawyers team can help you review eligibility, available inventory, and the search context that best supports your goals.",
+      "You choose the metro and practice area you want to prioritize. Best Lawyers then confirms whether placement inventory is available for that specific search context.",
   },
 ]
 

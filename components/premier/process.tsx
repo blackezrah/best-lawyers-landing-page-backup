@@ -7,8 +7,8 @@ const STAGES = [
     body: 'Choose the city and practice area that matter most.',
   },
   {
-    title: 'Confirm eligibility',
-    body: 'Best Lawyers verifies your recognition and available Premier Placement inventory.',
+    title: 'Confirm availability',
+    body: 'Best Lawyers confirms placement inventory for your chosen market and practice area.',
   },
   {
     title: 'Secure the position',

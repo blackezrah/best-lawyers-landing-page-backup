@@ -90,7 +90,7 @@ export function VisibilityComparison() {
           <div className="mt-6 rounded-3xl border border-ivory/15 bg-ink/90 px-4 py-4 text-sm leading-6 text-ivory/75">
             <p className="font-medium text-ivory">Only five Premier Placement results are available per market.</p>
             <p className="mt-2 text-sm text-ivory/70">
-              The first five positions are reserved for Premier Placement builds. Other eligible profiles continue to appear in organic ordering.
+              The first five positions are reserved for Premier Placement builds. Other profiles continue to appear in organic ordering.
             </p>
           </div>
         </div>

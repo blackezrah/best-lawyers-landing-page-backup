@@ -23,10 +23,10 @@ export function PositionAdvantage() {
           </Reveal>
           <Reveal delay={0.08} x={-24}>
             <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-ivory/70">
-              With Best Lawyers Premier Placement, your profile can appear within the top five positions, ensuring you are seen by prospective clients searching for a leading lawyer in your metro and practice area.
+              These data points show why placement matters: the right profile needs to be easy for clients to find when they are ready to hire.
             </p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-ivory/60">
-              Premier Placement appears above standard organic listings to help your eligible profile stand ahead of the broader search field.
+              Premier Placement helps your profile stand out in the one search result set that matters.
             </p>
           </Reveal>
         </div>

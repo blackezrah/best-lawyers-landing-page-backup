@@ -5,7 +5,7 @@ import { Reveal } from "./reveal"
 import { CtaButton } from "./cta-button"
 
 const STAGES = [
-  { icon: "search", label: "Search view", note: "Seen near the top" },
+  { icon: "search", label: "Search view", note: "Search placement visibility" },
   { icon: "user", label: "Profile view", note: "Strong interest" },
   { icon: "globe", label: "Website visit", note: "Deeper review" },
   { icon: "phone", label: "Contact action", note: "New lead chance" },

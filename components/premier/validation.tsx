@@ -52,37 +52,9 @@ export function Validation() {
           </StaggerItem>
 
           <StatPanel stat="97%" label="Would recommend Best Lawyers" note="Client trust" />
-
-          <QuotePanel
-            quote="When the legal need is significant, Best Lawyers is one of the first places we look to identify firms that fit our needs."
-            attribution="Anonymous evaluation team"
-          />
-          <QuotePanel
-            quote="Some of the strongest firms we've considered weren't previously on our radar. Best Lawyers has helped us identify attorneys we may have otherwise overlooked."
-            attribution="Anonymous evaluation team"
-          />
           <StatPanel stat="13M+" label="peer evaluations" note="Scale" />
-
           <StatPanel stat="151" label="practice areas" note="Market reach" />
-          <QuotePanel
-            quote="A Best Lawyers recognition immediately tells us a firm belongs in the conversation."
-            attribution="Anonymous evaluation team"
-          />
-          <QuotePanel
-            quote="We don't have time to evaluate every firm. Best Lawyers helps us focus on the strongest candidates."
-            attribution="Anonymous evaluation team"
-          />
-
           <StatPanel stat="40+" label="years of trust" note="Since 1983" />
-          <QuotePanel
-            quote="Recognition helps determine who makes our initial shortlist. From there, we evaluate experience, fit, and the needs of the engagement before making a final decision."
-            attribution="Anonymous evaluation team"
-          />
-          <QuotePanel
-            quote="Best Lawyers is one of the resources we use to compare potential legal partners before selecting outside counsel."
-            attribution="Anonymous evaluation team"
-          />
-
           <StatPanel stat="28K+" label="recognized lawyers" />
         </Stagger>
         <div className="mt-12 flex justify-center">

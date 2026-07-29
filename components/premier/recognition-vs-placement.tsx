@@ -21,14 +21,12 @@ export function RecognitionVsPlacement() {
           </Reveal>
           <Reveal delay={0.08} x={-24}>
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              Premier Placement changes where an eligible profile appears. It does not change how
-              Best Lawyers recognition is earned.
+              Premier Placement positions earned Best Lawyers recognition in the search result set you choose while preserving the merit-based selection process.
             </p>
           </Reveal>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
-          {/* Earned recognition */}
           <Reveal x={-36}>
             <article className="relative flex h-full flex-col rounded-2xl border border-gold-light/50 bg-card p-8 sm:p-10">
               <span
@@ -50,33 +48,18 @@ export function RecognitionVsPlacement() {
             </article>
           </Reveal>
 
-          {/* Paid placement, two aspects */}
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">
-            <Reveal delay={0.06} x={28}>
-              <article className="flex h-full flex-col rounded-2xl border border-line bg-card p-8">
-                <h3 className="font-serif text-xl font-normal tracking-tight text-ink">
-                  Premier Placement access
-                </h3>
-                <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
-                  Eligible profiles can secure one of the five Premier Placement positions in the chosen market and practice area.
-                </p>
-                <div className="flex-1" />
-                <CardLabel>Intentional distribution</CardLabel>
-              </article>
-            </Reveal>
-            <Reveal delay={0.12} x={36}>
-              <article className="flex h-full flex-col rounded-2xl border border-line bg-card p-8">
-                <h3 className="font-serif text-xl font-normal tracking-tight text-ink">
-                  Clear market reach
-                </h3>
-                <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
-                  Your profile is shown in the exact search you choose.
-                </p>
-                <div className="flex-1" />
-                <CardLabel>Market-specific visibility</CardLabel>
-              </article>
-            </Reveal>
-          </div>
+          <Reveal delay={0.06} x={28}>
+            <article className="flex h-full flex-col rounded-2xl border border-line bg-card p-8">
+              <h3 className="font-serif text-xl font-normal tracking-tight text-ink">
+                Premier Placement
+              </h3>
+              <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
+                Place earned Best Lawyers recognition in the search result set for the market and practice area you choose.
+              </p>
+              <div className="flex-1" />
+              <CardLabel>Market-specific visibility</CardLabel>
+            </article>
+          </Reveal>
         </div>
 
         <div className="mt-16 flex flex-col gap-10 border-t border-line pt-14 lg:flex-row lg:items-center lg:justify-between">
