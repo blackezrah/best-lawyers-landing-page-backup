@@ -74,46 +74,19 @@ export function Hero() {
             Premier Profile Placement moves the attorney listing behind your Best Lawyers credential into one of five placements ahead of organic results for the chosen region and practice area.
           </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: reduce ? 0 : 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.18, ease }}
-            className="mt-5 max-w-2xl text-[1.05rem] leading-[1.75] text-ivory/85 sm:text-xl"
-          >
-            That earned honor appears before the wider set while prospective clients and in-house counsel are still deciding whom to evaluate.
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: reduce ? 0 : 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.24, ease }}
-            className="mt-5 max-w-2xl text-base leading-relaxed text-ivory/75 sm:text-lg"
-          >
-            Access is limited to lawyers with current Best Lawyers honors. Once the chosen result set is filled, no additional Premier inventory remains.
-          </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.3, ease }}
+            transition={{ duration: 0.9, delay: 0.18, ease }}
             className="mt-9"
           >
             <CtaButton variant="gold" />
           </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: reduce ? 0 : 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.36, ease }}
-            className="mt-4 max-w-xl text-sm leading-relaxed text-ivory/60"
-          >
-            Availability is confirmed by metro and practice area. Checking does not reserve or purchase inventory.
-          </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.42, ease }}
+            transition={{ duration: 0.9, delay: 0.24, ease }}
             className="mt-12 max-w-2xl border-l border-gold/50 pl-6"
           >
             <h2 className="font-serif text-2xl font-medium leading-snug tracking-tight text-ivory sm:text-3xl">
