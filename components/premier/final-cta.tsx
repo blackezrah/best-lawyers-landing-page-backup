@@ -18,54 +18,18 @@ export function FinalCta() {
       <section ref={sectionRef} className="relative min-h-[108svh] overflow-hidden bg-ink text-ivory max-md:min-h-[78svh]">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
           <motion.div
-            className="absolute inset-0"
-            initial={
-              reduce
-                ? false
-                : {
-                    opacity: 0.34,
-                    filter: "blur(2px) brightness(0.72) contrast(0.9) saturate(0.86)",
-                  }
-            }
-            animate={
-              active
-                ? {
-                    opacity: 0.5,
-                    filter: "blur(0px) brightness(0.78) contrast(1.04) saturate(0.95)",
-                  }
-                : undefined
-            }
-            transition={{ duration: reduce ? 0 : 2.2, ease: easeOut }}
-          >
-            <Image
-              src="/Visibility-Shapes-Opps.webp"
-              alt=""
-              fill
-              priority={false}
-              sizes="100vw"
-              className="object-cover object-center"
-            />
-          </motion.div>
-          <div className="absolute inset-0 bg-ink/76 md:bg-ink/68" />
-          <motion.div
-            className="absolute inset-0 bg-[radial-gradient(circle_at_58%_45%,rgba(216,187,122,0.12),transparent_26%),radial-gradient(circle_at_42%_72%,rgba(255,255,255,0.06),transparent_24%)]"
+            className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(255,255,255,0.045),transparent_34%),radial-gradient(circle_at_50%_72%,rgba(216,187,122,0.055),transparent_28%)]"
             initial={reduce ? false : { opacity: 0 }}
             animate={active ? { opacity: 1 } : undefined}
-            transition={{ duration: reduce ? 0 : 2.4, delay: reduce ? 0 : 0.75, ease: easeOut }}
+            transition={{ duration: reduce ? 0 : 2.8, delay: reduce ? 0 : 0.55, ease: easeOut }}
           />
           <motion.div
-            className="absolute inset-0 bg-[linear-gradient(108deg,transparent_33%,rgba(216,187,122,0.09)_48%,transparent_63%)]"
-            initial={reduce ? false : { opacity: 0, x: "-18%" }}
-            animate={active ? { opacity: [0, 0.32, 0], x: "10%" } : undefined}
-            transition={{ duration: reduce ? 0 : 2.35, delay: reduce ? 0 : 1.45, ease: easeOut }}
-          />
-          <motion.div
-            className="absolute inset-0 opacity-0 [background-image:radial-gradient(circle_at_30%_34%,rgba(255,255,255,0.14)_0_1px,transparent_1.5px),radial-gradient(circle_at_62%_58%,rgba(216,187,122,0.16)_0_1px,transparent_1.5px),radial-gradient(circle_at_76%_42%,rgba(255,255,255,0.1)_0_1px,transparent_1.5px)]"
+            className="absolute inset-x-[18%] top-[22%] h-px bg-gradient-to-r from-transparent via-gold-light/18 to-transparent"
             initial={reduce ? false : { opacity: 0, y: 10 }}
-            animate={active ? { opacity: 0.24, y: 0 } : undefined}
-            transition={{ duration: reduce ? 0 : 2.6, delay: reduce ? 0 : 1.2, ease: easeOut }}
+            animate={active ? { opacity: 1, y: 0 } : undefined}
+            transition={{ duration: reduce ? 0 : 1.8, delay: reduce ? 0 : 1.1, ease: easeOut }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-transparent to-ink/40" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(26,31,37,0.22)_62%,rgba(26,31,37,0.72)_100%)]" />
         </div>
 
         <div className="relative z-10 mx-auto flex min-h-[108svh] max-w-5xl items-center justify-center px-6 py-32 text-center md:py-44 max-md:min-h-[78svh]">
