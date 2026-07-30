@@ -5,9 +5,10 @@ import { useState } from 'react'
 import { useMeetingUrl } from '@/lib/use-meeting-url'
 
 const NAV = [
-  { label: 'Why Premier', href: '#why-premier' },
-  { label: 'Client Trust', href: '#client-trust' },
+  { label: 'Premier Advantage', href: '#premier-advantage' },
+  { label: 'Four Ways It Pays', href: '#four-ways-it-pays' },
   { label: 'How It Works', href: '#how-it-works' },
+  { label: 'Client Trust', href: '#client-trust' },
   { label: 'FAQ', href: '#faq' },
 ]
 
@@ -23,7 +24,7 @@ export function SiteHeader() {
           target="_top"
           rel="noopener noreferrer"
           className="flex items-center gap-3"
-          aria-label="Best Lawyers — go to bestlawyers.com"
+          aria-label="Best Lawyers - go to bestlawyers.com"
         >
           <Image
             src="/best-lawyers-light-logo.webp"
@@ -36,7 +37,7 @@ export function SiteHeader() {
           />
         </a>
 
-        <nav aria-label="Primary" className="hidden items-center gap-9 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-6 xl:gap-9 lg:flex">
           {NAV.map((item) => (
             <a
               key={item.label}

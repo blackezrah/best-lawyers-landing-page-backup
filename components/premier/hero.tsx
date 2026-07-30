@@ -5,8 +5,6 @@ import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
 import { CtaButton } from './cta-button'
 
-const ANCHORS = ['Discovery', 'Consideration', 'Opportunity']
-
 export function Hero() {
   const ref = useRef<HTMLElement>(null)
   const reduce = useReducedMotion()
@@ -64,70 +62,67 @@ export function Hero() {
             transition={{ duration: 0.9, ease }}
             className="text-balance font-serif text-[2.7rem] font-light leading-[1.04] tracking-[-0.02em] sm:text-6xl lg:text-[4.75rem]"
           >
-            Be found first.
+            The right placement starts the right conversations.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.12, ease }}
-            className="mt-8 font-serif text-3xl font-semibold tracking-tight text-gold sm:text-4xl"
+            className="mt-8 max-w-2xl text-[1.05rem] leading-[1.75] text-ivory/85 sm:text-xl"
           >
-            Premier Placement
+            Premier Profile Placement moves the attorney listing behind your Best Lawyers credential into one of five placements ahead of organic results for the chosen region and practice area.
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.18, ease }}
-            className="mt-6 max-w-xl text-[1.05rem] leading-[1.75] text-ivory/85 sm:text-xl"
+            className="mt-5 max-w-2xl text-[1.05rem] leading-[1.75] text-ivory/85 sm:text-xl"
           >
-            Be found first by high-intent prospective clients searching for a leading lawyer in your metro and practice area.
+            That earned honor appears before the wider set while prospective clients and in-house counsel are still deciding whom to evaluate.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: reduce ? 0 : 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.24, ease }}
+            className="mt-5 max-w-2xl text-base leading-relaxed text-ivory/75 sm:text-lg"
+          >
+            Access is limited to lawyers with current Best Lawyers honors. Once the chosen result set is filled, no additional Premier inventory remains.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.24, ease }}
+            transition={{ duration: 0.9, delay: 0.3, ease }}
             className="mt-9"
           >
             <CtaButton variant="gold" />
           </motion.div>
 
-          <motion.figure
+          <motion.p
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.32, ease }}
-            className="mt-14 max-w-2xl text-left text-ivory"
+            transition={{ duration: 0.9, delay: 0.36, ease }}
+            className="mt-4 max-w-xl text-sm leading-relaxed text-ivory/60"
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-gold/85">
-              Client testimonial
-            </p>
-            <blockquote className="mt-5 text-2xl font-medium leading-[1.45] tracking-[-0.02em] text-ivory sm:text-[2.2rem]">
-              “Premier Placement finally got our firm discovered by the right clients in the right markets.”
-            </blockquote>
-            <figcaption className="mt-6 text-sm font-semibold uppercase tracking-[0.28em] text-gold/85 sm:text-base">
-              Rookridge Law Firm
-            </figcaption>
-          </motion.figure>
-        </div>
-      </div>
+            Availability is confirmed by metro and practice area. Checking does not reserve or purchase inventory.
+          </motion.p>
 
-      <div className="absolute inset-x-0 bottom-0 z-20 border-t border-line-dark/40">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-3 divide-x divide-line-dark/40 px-5 sm:px-8">
-          {ANCHORS.map((label, i) => (
-            <motion.div
-              key={label}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 + i * 0.1 }}
-              className="flex items-center justify-center py-5 first:justify-start first:pl-0 last:justify-end last:pr-0 sm:py-6"
-            >
-              <span className="font-serif text-base tracking-tight text-ivory/85 sm:text-lg">
-                {label}
-              </span>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: reduce ? 0 : 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.42, ease }}
+            className="mt-12 max-w-2xl border-l border-gold/50 pl-6"
+          >
+            <h2 className="font-serif text-2xl font-medium leading-snug tracking-tight text-ivory sm:text-3xl">
+              Every open allocation in your chosen geography will belong to a Best Lawyers honoree.
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-ivory/75">
+              The only question is whether yours is among them.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>

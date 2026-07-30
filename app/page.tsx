@@ -22,15 +22,15 @@ export default function Page() {
       </a>
       <SiteHeader />
       <main id="main">
-          <Hero />
-          <BrandLogos />
+        <Hero />
         <VisibilityComparison />
         <PositionAdvantage />
-        <TrustStrip />
+        <Validation />
         <EngagementProgression />
+        <BrandLogos />
+        <TrustStrip />
         <MarketTargeting />
         <RecognitionVsPlacement />
-        <Validation />
         <Faq />
       </main>
       <FinalCta />

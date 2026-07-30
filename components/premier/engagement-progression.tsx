@@ -1,119 +1,282 @@
 "use client"
 
-import { motion } from "motion/react"
+import { motion, useMotionValue, useReducedMotion, useSpring } from "motion/react"
+import { useState, type PointerEvent } from "react"
 import { Reveal } from "./reveal"
 import { CtaButton } from "./cta-button"
 
-const STAGES = [
-  { icon: "search", label: "Search view", note: "Search placement visibility" },
-  { icon: "user", label: "Profile view", note: "Strong interest" },
-  { icon: "globe", label: "Website visit", note: "Deeper review" },
-  { icon: "phone", label: "Contact action", note: "New lead chance" },
+const EASE_OUT = [0.22, 1, 0.36, 1] as const
+
+const VALUE_PATHS = [
+  {
+    title: "Media Value",
+    icon: "media",
+    body: [
+      "Reach active legal buyers without entering an auction for every visit or managing a paid-search campaign.",
+      "The supporting case study models the annualized traffic of the average Premier directory presence at more than $200,000 in equivalent paid-search value under its stated CPC assumption.",
+    ],
+  },
+  {
+    title: "Search and AI Visibility",
+    icon: "search",
+    body: [
+      "Maintain a complete, structured directory presence on an established legal platform, giving prospective clients, search engines, and AI-assisted research tools a clearer source for credentials, practice areas, and peer-reviewed distinction.",
+    ],
+  },
+  {
+    title: "Referral Conversion",
+    icon: "referral",
+    body: [
+      "Referrals create awareness. Third-party proof helps turn that awareness into confidence.",
+      "When a prospect checks the name they were given, your earned distinction is easier to encounter.",
+    ],
+  },
+  {
+    title: "Done for You",
+    icon: "done",
+    body: [
+      "No keyword strategy. No bid management. No creative rotation. No daily media optimization.",
+      "Choose the territory, confirm availability, and activate the placement.",
+    ],
+  },
 ]
 
-function StageIcon({ name }: { name: string }) {
-  if (name === "search") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 text-gold" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="11" cy="11" r="7" />
-        <path d="m20 20-4-4" />
-      </svg>
-    )
-  }
+type BenefitIconName = (typeof VALUE_PATHS)[number]["icon"]
 
-  if (name === "user") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 text-gold" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20 21a8 8 0 0 0-16 0" />
-        <circle cx="12" cy="7" r="4" />
-      </svg>
-    )
+function BenefitIcon({ name, index }: { name: BenefitIconName; index: number }) {
+  const reduce = useReducedMotion()
+  const baseDelay = reduce ? 0 : index * 0.12 + 0.18
+  const draw = {
+    hidden: { opacity: reduce ? 1 : 0, pathLength: reduce ? 1 : 0 },
+    show: {
+      opacity: 1,
+      pathLength: 1,
+      transition: {
+        duration: reduce ? 0 : 0.9,
+        delay: baseDelay,
+        ease: EASE_OUT,
+      },
+    },
   }
-
-  if (name === "globe") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 text-gold" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M2 12h20" />
-        <path d="M12 2a15 15 0 0 1 0 20" />
-        <path d="M12 2a15 15 0 0 0 0 20" />
-      </svg>
-    )
+  const common = {
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.5,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    vectorEffect: "non-scaling-stroke" as const,
   }
 
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 text-gold" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z" />
-    </svg>
+    <motion.svg
+      aria-hidden="true"
+      viewBox="0 0 48 48"
+      className="mb-7 h-12 w-12 text-gold/80 transition-colors duration-500 group-hover:text-gold"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-80px" }}
+    >
+      {name === "media" && (
+        <>
+          <motion.circle {...common} variants={draw} cx="24" cy="24" r="4" />
+          <motion.path {...common} variants={draw} d="M15 24a9 9 0 0 1 18 0" />
+          <motion.path {...common} variants={draw} d="M9 24a15 15 0 0 1 30 0" />
+          <motion.path {...common} variants={draw} d="M18 31c3.8 2.7 8.2 2.7 12 0" />
+        </>
+      )}
+      {name === "search" && (
+        <>
+          <motion.path {...common} variants={draw} d="M14 17l12-5 9 18-17 4-4-17Z" />
+          <motion.path {...common} variants={draw} d="M18 34l8-22" />
+          <motion.path {...common} variants={draw} d="M14 17l21 13" />
+          <motion.circle {...common} variants={draw} cx="14" cy="17" r="3" />
+          <motion.circle {...common} variants={draw} cx="26" cy="12" r="3" />
+          <motion.circle {...common} variants={draw} cx="35" cy="30" r="3" />
+          <motion.circle {...common} variants={draw} cx="18" cy="34" r="3" />
+        </>
+      )}
+      {name === "referral" && (
+        <>
+          <motion.path {...common} variants={draw} d="M15 33c1.8-4 5-6 9-6s7.2 2 9 6" />
+          <motion.circle {...common} variants={draw} cx="24" cy="17" r="5" />
+          <motion.path {...common} variants={draw} d="M8 30c1.2-3 3.5-4.6 6.8-4.9" />
+          <motion.path {...common} variants={draw} d="M40 30c-1.2-3-3.5-4.6-6.8-4.9" />
+          <motion.circle {...common} variants={draw} cx="12" cy="20" r="3.5" />
+          <motion.circle {...common} variants={draw} cx="36" cy="20" r="3.5" />
+        </>
+      )}
+      {name === "done" && (
+        <>
+          <motion.path
+            {...common}
+            variants={draw}
+            className="origin-center transition-transform duration-700 group-hover:rotate-45 motion-reduce:transition-none group-hover:motion-reduce:rotate-0"
+            d="M24 9v5M24 34v5M13.4 13.4l3.5 3.5M31.1 31.1l3.5 3.5M9 24h5M34 24h5M13.4 34.6l3.5-3.5M31.1 16.9l3.5-3.5"
+          />
+          <motion.circle {...common} variants={draw} cx="24" cy="24" r="9" />
+          <motion.path {...common} variants={draw} d="M20 24.4l2.7 2.7L28.8 21" />
+        </>
+      )}
+    </motion.svg>
+  )
+}
+
+function ValueCard({
+  item,
+  index,
+  onHoverChange,
+}: {
+  item: (typeof VALUE_PATHS)[number]
+  index: number
+  onHoverChange: (active: boolean) => void
+}) {
+  const reduce = useReducedMotion()
+  const rawRotateX = useMotionValue(0)
+  const rawRotateY = useMotionValue(0)
+  const rotateX = useSpring(rawRotateX, { stiffness: 180, damping: 22, mass: 0.5 })
+  const rotateY = useSpring(rawRotateY, { stiffness: 180, damping: 22, mass: 0.5 })
+
+  function handlePointerMove(event: PointerEvent<HTMLElement>) {
+    if (reduce) return
+    const rect = event.currentTarget.getBoundingClientRect()
+    const x = (event.clientX - rect.left) / rect.width - 0.5
+    const y = (event.clientY - rect.top) / rect.height - 0.5
+    rawRotateX.set(y * -0.6)
+    rawRotateY.set(x * 0.8)
+  }
+
+  function resetTilt() {
+    rawRotateX.set(0)
+    rawRotateY.set(0)
+    onHoverChange(false)
+  }
+
+  return (
+    <motion.article
+      custom={index}
+      variants={{
+        hidden: {
+          opacity: reduce ? 1 : 0,
+          y: reduce ? 0 : 28,
+          scale: reduce ? 1 : 0.985,
+          filter: reduce ? "blur(0px)" : "blur(8px)",
+        },
+        show: (order: number) => ({
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          filter: "blur(0px)",
+          transition: {
+            type: "spring",
+            stiffness: 150,
+            damping: 22,
+            mass: 0.8,
+            delay: reduce ? 0 : order * 0.12,
+          },
+        }),
+      }}
+      onHoverStart={() => onHoverChange(true)}
+      onHoverEnd={resetTilt}
+      onPointerMove={handlePointerMove}
+      onPointerLeave={resetTilt}
+      whileHover={
+        reduce
+          ? undefined
+          : {
+              y: -6,
+              backgroundColor: "#333A46",
+              boxShadow:
+                "0 18px 42px rgba(0,0,0,.22), 0 1px 0 rgba(255,255,255,.03) inset, 0 0 0 1px rgba(212,175,55,.15)",
+            }
+      }
+      transition={{ type: "spring", stiffness: 260, damping: 24 }}
+      style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+      className="group relative overflow-hidden rounded-lg border border-line-dark/60 bg-ink-soft p-7 transition-colors duration-500 will-change-transform"
+    >
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 -left-[140%] w-[140%] translate-x-0 bg-[linear-gradient(90deg,transparent,rgba(212,175,55,.06),transparent)] transition-transform duration-[650ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-[220%] motion-reduce:hidden"
+      />
+      <span
+        aria-hidden="true"
+        className="absolute left-0 top-0 h-px w-8 bg-gold/35 transition-all duration-500 group-hover:w-24 group-hover:bg-gold/70 motion-reduce:transition-none"
+      />
+      <span
+        aria-hidden="true"
+        className="absolute left-0 top-0 h-8 w-px bg-gold/35 transition-all duration-500 group-hover:h-14 group-hover:bg-gold/70 motion-reduce:transition-none"
+      />
+
+      <BenefitIcon name={item.icon} index={index} />
+
+      <h3 className="font-serif text-2xl font-medium tracking-tight text-ivory transition-transform duration-500 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0">
+        {item.title}
+      </h3>
+      {item.body.map((paragraph) => (
+        <p
+          key={paragraph}
+          className="mt-4 text-base leading-relaxed text-ivory/70 transition-all duration-500 group-hover:translate-y-[-2px] group-hover:text-ivory/90 motion-reduce:transition-none motion-reduce:group-hover:translate-y-0"
+        >
+          {paragraph}
+        </p>
+      ))}
+    </motion.article>
   )
 }
 
 export function EngagementProgression() {
+  const reduce = useReducedMotion()
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+
   return (
-    <section className="relative overflow-hidden bg-ink py-24 text-ivory md:py-36">
+    <section id="four-ways-it-pays" className="scroll-mt-24 relative overflow-hidden bg-ink py-24 text-ivory md:py-36">
       <div className="mx-auto max-w-6xl px-6">
-        <Reveal x={-32} className="mx-auto max-w-3xl text-center">
+        <Reveal x={-32} className="max-w-3xl">
           <h2 className="font-serif text-4xl leading-[1.05] tracking-tight text-balance md:text-5xl">
-            See how visibility turns into engagement.
+            One fixed investment. Four ways it pays.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-ivory/70">
-            The goal is simple: help more ready buyers find your profile and take the next step.
+            The investment does not rely on a single path to return. It supports audience access, modern discovery, referral verification, and operational efficiency.
           </p>
         </Reveal>
-        <div className="mt-16 hidden md:block">
-          <div className="relative mx-auto flex max-w-5xl flex-wrap items-stretch justify-center gap-6">
-            <motion.span
-              aria-hidden="true"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, margin: "-120px" }}
-              transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute left-[7%] right-[7%] top-[2.15rem] h-px origin-left bg-gradient-to-r from-gold/20 via-gold/50 to-gold"
+
+        <motion.div
+          className="mt-14 grid grid-cols-1 md:grid-cols-2"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
+          variants={{
+            hidden: { gap: reduce ? 40 : 24, scale: reduce ? 1 : 0.96 },
+            show: {
+              gap: 40,
+              scale: 1,
+              transition: {
+                type: "spring",
+                stiffness: 120,
+                damping: 24,
+                mass: 0.9,
+              },
+            },
+          }}
+        >
+          {VALUE_PATHS.map((item, index) => (
+            <ValueCard
+              key={item.title}
+              item={item}
+              index={index}
+              onHoverChange={(active) => setHoveredCard(active ? index : null)}
             />
-            {STAGES.map((stage, i) => {
-              return (
-                <motion.div
-                  key={stage.label}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-120px" }}
-                  transition={{ duration: 0.6, delay: 0.15 + i * 0.18, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative flex min-w-[13rem] max-w-[14rem] flex-col items-center text-center"
-                >
-                  <span className="relative z-10 flex h-[4.3rem] w-[4.3rem] items-center justify-center rounded-full border border-gold/30 bg-ink shadow-[0_0_0_6px_rgba(26,31,37,1)]">
-                    <span className="flex h-full w-full items-center justify-center rounded-full bg-gold/10">
-                      <StageIcon name={stage.icon} />
-                    </span>
-                  </span>
-                  <p className="mt-6 font-serif text-xl tracking-tight">{stage.label}</p>
-                  <p className="mt-1.5 text-sm text-ivory/55">{stage.note}</p>
+          ))}
+        </motion.div>
 
-                </motion.div>
-              )
-            })}
-          </div>
-        </div>
-        <div className="mt-14 flex flex-col md:hidden">
-          {STAGES.map((stage, i) => {
-            return (
-              <Reveal key={stage.label} delay={i * 0.08} x={18} className="relative flex gap-5 pb-8 last:pb-0">
-                <div className="flex flex-col items-center">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/30 bg-gold/10">
-                    <StageIcon name={stage.icon} />
-                  </span>
-                  {i < STAGES.length - 1 && <span aria-hidden="true" className="mt-2 w-px flex-1 bg-gold/25" />}
-                </div>
-                <div className="pt-3">
-                  <p className="font-serif text-xl tracking-tight">{stage.label}</p>
-                  <p className="mt-1 text-sm text-ivory/55">{stage.note}</p>
-                </div>
-              </Reveal>
-            )
-          })}
-        </div>
-
-        <Reveal delay={0.1} x={24} className="mt-16 flex w-full justify-center">
-          <CtaButton variant="gold" />
+        <Reveal delay={0.1} x={24} className="mt-12">
+          <CtaButton
+            variant="gold"
+            className={
+              hoveredCard === null
+                ? undefined
+                : "ring-1 ring-gold/30 shadow-[0_0_34px_rgba(212,175,55,0.24)]"
+            }
+          />
         </Reveal>
       </div>
     </section>
