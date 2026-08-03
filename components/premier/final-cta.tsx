@@ -29,7 +29,7 @@ export function FinalCta() {
             animate={active ? { opacity: 1, y: 0 } : undefined}
             transition={{ duration: reduce ? 0 : 1.8, delay: reduce ? 0 : 1.1, ease: easeOut }}
           />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(26,31,37,0.22)_62%,rgba(26,31,37,0.72)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(40,46,58,0.22)_62%,rgba(40,46,58,0.72)_100%)]" />
         </div>
 
         <div className="relative z-10 mx-auto flex min-h-[108svh] max-w-5xl items-center justify-center px-6 py-32 text-center md:py-44 max-md:min-h-[78svh]">
@@ -51,7 +51,7 @@ export function FinalCta() {
               transition={{ duration: reduce ? 0 : 0.85, delay: reduce ? 0 : 2.22, ease: easeOut }}
             >
               <span className="inline-flex flex-col items-stretch">
-                <CtaButton variant="gold" className="bg-gold-soft hover:bg-gold-light" />
+                <CtaButton variant="gold" />
                 <motion.span
                   aria-hidden="true"
                   className="mt-4 block h-px w-full origin-left bg-gold-light/70"
@@ -77,14 +77,11 @@ export function FinalCta() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-6 md:flex-row">
           <a href="https://www.bestlawyers.com" target="_top" rel="noopener noreferrer" aria-label="Visit Best Lawyers">
             <Image
-              src="/best-lawyers-light-logo.webp"
+              src="/best-lawyers.svg"
               alt="Best Lawyers"
-              width={434}
-              height={88}
+              width={720}
+              height={144}
               className="h-auto w-[8.8rem]"
-              // Brighten the footer logo so it reads white on transparent backgrounds.
-              // Developer note: replace with an approved white logo file if available.
-              style={{ filter: 'brightness(2) saturate(1.2)' }}
             />
           </a>
 

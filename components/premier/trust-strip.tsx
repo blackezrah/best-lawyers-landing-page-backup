@@ -166,7 +166,7 @@ export function TrustStrip() {
               It is the{' '}
               <motion.span
                 className="relative inline-block text-ink"
-                animate={active ? { color: '#1A1F25' } : {}}
+                animate={active ? { color: '#282e3a' } : {}}
                 transition={{ duration: reduce ? 0 : 0.45, delay: reduce ? 0 : 1.22, ease: EASE_OUT }}
               >
                 fixed Premier field

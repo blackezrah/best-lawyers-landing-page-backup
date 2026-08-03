@@ -103,10 +103,10 @@ export function MarketTargeting() {
                   />
 
                   <motion.div
-                    className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-gold-light/70 bg-ink text-sm font-semibold tabular-nums text-gold-light shadow-[0_0_0_6px_rgba(26,31,37,1)] transition-colors duration-300 group-hover:border-gold-light group-hover:text-ivory"
+                    className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-gold-light/70 bg-ink text-sm font-semibold tabular-nums text-gold-light shadow-[0_0_0_6px_rgba(40,46,58,1)] transition-colors duration-300 group-hover:border-gold-light group-hover:text-ivory"
                     initial={{
                       scale: reduce ? 1 : 0.92,
-                      backgroundColor: '#1A1F25',
+                      backgroundColor: '#282e3a',
                     }}
                     animate={
                       active

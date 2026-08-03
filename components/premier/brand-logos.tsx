@@ -201,7 +201,7 @@ export function BrandLogos() {
                       : {
                           borderColor: 'rgba(184,136,62,.42)',
                           boxShadow:
-                            '0 18px 48px rgba(26,31,37,.12), 0 1px 0 rgba(255,255,255,.72) inset',
+                            '0 18px 48px rgba(40,46,58,.12), 0 1px 0 rgba(255,255,255,.72) inset',
                         }
                   }
                   transition={{
@@ -212,7 +212,7 @@ export function BrandLogos() {
                     borderColor: { duration: reduce ? 0 : 0.24, ease: EASE_OUT },
                     boxShadow: { duration: reduce ? 0 : 0.3, ease: EASE_OUT },
                   }}
-                  className="group relative min-h-[16rem] overflow-hidden rounded-[18px] border border-line/80 bg-[#fffdf8] p-8 shadow-[0_12px_34px_rgba(26,31,37,.06)]"
+                  className="group relative min-h-[16rem] overflow-hidden rounded-[18px] border border-line/80 bg-[#fffdf8] p-8 shadow-[0_12px_34px_rgba(40,46,58,.06)]"
                   style={{
                     backgroundImage:
                       'linear-gradient(135deg, rgba(255,255,255,.95), rgba(250,248,242,.92)), radial-gradient(circle at 20% 0%, rgba(184,136,62,.08), transparent 32%)',

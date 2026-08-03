@@ -431,7 +431,7 @@ export function PositionAdvantage() {
       </div>
       <div
         aria-hidden="true"
-        className="absolute inset-y-0 left-0 z-10 w-full bg-[linear-gradient(90deg,#1A1F25_0%,#1A1F25_52%,rgba(26,31,37,0.92)_62%,rgba(26,31,37,0.7)_72%,rgba(26,31,37,0.42)_82%,rgba(26,31,37,0.18)_92%,rgba(26,31,37,0)_100%)] lg:w-[72%] lg:bg-[linear-gradient(90deg,#1A1F25_0%,#1A1F25_58%,rgba(26,31,37,0.9)_68%,rgba(26,31,37,0.62)_78%,rgba(26,31,37,0.32)_88%,rgba(26,31,37,0)_100%)]"
+        className="absolute inset-y-0 left-0 z-10 w-full bg-[linear-gradient(90deg,#282e3a_0%,#282e3a_52%,rgba(40,46,58,0.92)_62%,rgba(40,46,58,0.7)_72%,rgba(40,46,58,0.42)_82%,rgba(40,46,58,0.18)_92%,rgba(40,46,58,0)_100%)] lg:w-[72%] lg:bg-[linear-gradient(90deg,#282e3a_0%,#282e3a_58%,rgba(40,46,58,0.9)_68%,rgba(40,46,58,0.62)_78%,rgba(40,46,58,0.32)_88%,rgba(40,46,58,0)_100%)]"
       />
 
       <div className="relative z-20 mx-auto flex min-h-[100svh] w-full max-w-7xl items-center px-5 py-24 sm:px-8 sm:py-32">

@@ -27,13 +27,12 @@ export function SiteHeader() {
           aria-label="Best Lawyers - go to bestlawyers.com"
         >
           <Image
-            src="/best-lawyers-light-logo.webp"
+            src="/best-lawyers.svg"
             alt="Best Lawyers"
-            width={434}
-            height={88}
+            width={720}
+            height={144}
             priority
             className="h-auto w-[8.4rem] sm:w-[9.6rem]"
-            style={{ filter: 'brightness(2.3) saturate(1.3)' }}
           />
         </a>
 
@@ -51,9 +50,9 @@ export function SiteHeader() {
             href={meetingUrl}
             target="_top"
             rel="noopener noreferrer"
-            className="rounded-full border border-gold/60 bg-gold text-ink px-5 py-2 text-sm font-medium tracking-tight transition-colors hover:bg-gold-soft"
+            className="rounded-full border border-coral bg-coral px-5 py-2 text-sm font-medium tracking-tight text-ivory transition-colors hover:border-[#d91f24] hover:bg-[#d91f24]"
           >
-            Check Market Availability
+            Schedule a Meeting
           </a>
         </nav>
 
@@ -88,9 +87,9 @@ export function SiteHeader() {
               target="_top"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 rounded-full border border-gold/60 px-3 py-3 text-center text-base font-medium text-gold"
+              className="mt-2 rounded-full border border-coral bg-coral px-3 py-3 text-center text-base font-medium text-ivory transition-colors hover:border-[#d91f24] hover:bg-[#d91f24]"
             >
-              Check Market Availability
+              Schedule a Meeting
             </a>
           </nav>
         </div>

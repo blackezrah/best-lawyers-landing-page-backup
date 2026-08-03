@@ -3,10 +3,10 @@
 import { cn } from '@/lib/utils'
 import { useMeetingUrl } from '@/lib/use-meeting-url'
 
-const CTA_LABEL = 'Check Market Availability'
+const CTA_LABEL = 'Schedule a Meeting'
 
 type CtaButtonProps = {
-  variant?: 'gold' | 'ink' | 'outline' | 'ivory'
+  variant?: 'red' | 'gold' | 'ink' | 'outline' | 'ivory'
   size?: 'md' | 'lg'
   className?: string
   fullWidth?: boolean
@@ -21,10 +21,14 @@ export function CtaButton({ variant = 'gold', size = 'lg', className, fullWidth 
     lg: 'text-[0.95rem] px-8 py-4',
   }
   const variants = {
+    red:
+      'bg-coral text-ivory hover:bg-[#d91f24] shadow-[0_1px_0_rgba(255,255,255,0.22)_inset]',
     gold:
-      'bg-gold text-ink hover:bg-gold-soft shadow-[0_1px_0_rgba(255,255,255,0.25)_inset]',
-    ink: 'bg-ink text-ivory hover:bg-ink-soft',
-    ivory: 'bg-ivory text-ink hover:bg-parchment',
+      'bg-coral text-ivory hover:bg-[#d91f24] shadow-[0_1px_0_rgba(255,255,255,0.22)_inset]',
+    ink:
+      'bg-coral text-ivory hover:bg-[#d91f24] shadow-[0_1px_0_rgba(255,255,255,0.22)_inset]',
+    ivory:
+      'bg-coral text-ivory hover:bg-[#d91f24] shadow-[0_1px_0_rgba(255,255,255,0.22)_inset]',
     outline:
       'border border-line-dark/60 text-ivory hover:border-gold hover:text-gold bg-transparent',
   }

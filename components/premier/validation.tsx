@@ -79,7 +79,7 @@ function StatPanel({
           : {
               y: -4,
               borderColor: "rgba(212,175,55,.38)",
-              backgroundColor: "#2F3742",
+              backgroundColor: "#282e3a",
               boxShadow:
                 "0 14px 34px rgba(0,0,0,.2), 0 1px 0 rgba(255,255,255,.03) inset",
             }

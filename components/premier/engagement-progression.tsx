@@ -184,7 +184,7 @@ function ValueCard({
           ? undefined
           : {
               y: -6,
-              backgroundColor: "#333A46",
+              backgroundColor: "#333a46",
               boxShadow:
                 "0 18px 42px rgba(0,0,0,.22), 0 1px 0 rgba(255,255,255,.03) inset, 0 0 0 1px rgba(212,175,55,.15)",
             }

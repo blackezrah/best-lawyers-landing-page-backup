@@ -14,11 +14,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/premier-placement',
   },
+
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/bl-favicon.png', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
 }
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#1A1F25',
+  themeColor: '#282e3a',
 }
 
 export default function RootLayout({

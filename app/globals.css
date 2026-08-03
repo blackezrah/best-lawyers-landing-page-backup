@@ -157,18 +157,18 @@
   --font-serif: 'Optima', Arial, Helvetica, sans-serif;
   --font-gentleman-black: 'Gentleman Black', 'Gentleman', Georgia, 'Times New Roman', serif;
 
-  --ink: #1A1F25;
-  --ink-soft: #272E38;
+  --ink: #282e3a;
+  --ink-soft: #333a46;
   --ivory: #FFFFFF;
   --parchment: #F3F3F3;
   --gold: #C9A35B;
   --gold-on-light: #AF863A;
   --gold-soft: #D8BB7A;
   --coral: #EB4649;
-  --blue-gray: #4C5562;
-  --blue-gray-dark: #3E4754;
+  --blue-gray: #4c5562;
+  --blue-gray-dark: #333a46;
   --line: #E0E0E0;
-  --line-dark: #3E4754;
+  --line-dark: #333a46;
 
   --background: var(--ivory);
   --foreground: var(--ink);
