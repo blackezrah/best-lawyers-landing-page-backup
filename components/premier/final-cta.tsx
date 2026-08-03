@@ -78,7 +78,7 @@ export function FinalCta() {
           </a>
 
           <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-            <a href="https://www.bestlawyers.com/about" target="_top" rel="noopener noreferrer" className="text-sm text-ivory/60 transition-colors hover:text-coral">About</a>
+            <a href="https://www.bestlawyers.com/about-us" target="_top" rel="noopener noreferrer" className="text-sm text-ivory/60 transition-colors hover:text-coral">About</a>
             <a href="https://www.bestlawyers.com/methodology" target="_top" rel="noopener noreferrer" className="text-sm text-ivory/60 transition-colors hover:text-coral">Methodology</a>
             <a href="https://www.bestlawyers.com/privacy-policy" target="_top" rel="noopener noreferrer" className="text-sm text-ivory/60 transition-colors hover:text-coral">Privacy Policy</a>
             <a href="https://www.bestlawyers.com/cookie-policy" target="_top" rel="noopener noreferrer" className="text-sm text-ivory/60 transition-colors hover:text-coral">Cookie Policy</a>
