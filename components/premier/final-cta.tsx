@@ -61,14 +61,6 @@ export function FinalCta() {
                 />
               </span>
             </motion.div>
-            <motion.p
-              className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-ivory/60"
-              initial={reduce ? false : { opacity: 0, filter: "blur(3px)" }}
-              animate={active ? { opacity: 1, filter: "blur(0px)" } : undefined}
-              transition={{ duration: reduce ? 0 : 0.85, delay: reduce ? 0 : 2.58, ease: easeOut }}
-            >
-              Availability is confirmed individually. Checking does not reserve or purchase a position.
-            </motion.p>
           </div>
         </div>
       </section>
