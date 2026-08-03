@@ -164,7 +164,7 @@
   --gold: #C9A35B;
   --gold-on-light: #AF863A;
   --gold-soft: #D8BB7A;
-  --coral: #EB4649;
+  --coral: #D22630;
   --blue-gray: #4c5562;
   --blue-gray-dark: #333a46;
   --line: #E0E0E0;
@@ -240,6 +240,12 @@
     outline: 2px solid var(--gold);
     outline-offset: 3px;
     border-radius: 2px;
+  }
+}
+
+@layer components {
+  .conversion-emphasis {
+    color: var(--coral);
   }
 }
 

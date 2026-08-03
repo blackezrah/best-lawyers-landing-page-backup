@@ -163,7 +163,7 @@ export function BrandLogos() {
               Some prospects begin on BestLawyers.com. Others arrive through a referral, search result, event, direct outreach, or AI-assisted answer.
             </p>
             <p className="mt-5 max-w-3xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              Origin varies. Verification does not.
+              Origin varies. <span className="conversion-emphasis">Verification does not.</span>
             </p>
             <p className="mt-5 max-w-3xl text-pretty text-lg leading-relaxed text-muted-foreground">
               When that check happens, an earlier Best Lawyers presence gives your credential more room to be seen.

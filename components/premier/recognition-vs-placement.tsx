@@ -80,7 +80,13 @@ export function RecognitionVsPlacement() {
                   ease: EASE_OUT,
                 }}
               >
-                {copy}
+                {index === 0 ? (
+                  <>
+                    Best Lawyers recognition cannot be purchased.
+                  </>
+                ) : (
+                  copy
+                )}
               </motion.p>
             ))}
           </div>

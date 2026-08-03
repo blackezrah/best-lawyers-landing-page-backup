@@ -446,7 +446,7 @@ export function PositionAdvantage() {
               A competing attorney does not need a stronger credential to appear ahead of you. They need access to the limited placement tier in the same territory.
             </p>
             <p className="mt-5 text-pretty text-lg leading-relaxed text-ivory/72">
-              Once secured, that allocation is unavailable to another eligible attorney for the term. Waiting does not protect the opportunity. It leaves inventory open.
+              Once secured, that allocation is <span className="conversion-emphasis">unavailable to another eligible attorney</span> for the term. Waiting does not protect the opportunity. It leaves inventory open.
             </p>
           </Reveal>
           <Reveal delay={0.16} x={-20}>

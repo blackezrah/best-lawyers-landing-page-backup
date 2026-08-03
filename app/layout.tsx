@@ -3,6 +3,7 @@ import { preload } from 'react-dom'
 import './globals.css'
 import { HubspotModalProvider } from '@/components/premier/hubspot-modal'
 import { SmoothScrollProvider } from '@/components/premier/smooth-scroll-provider'
+import { CountdownProvider } from '@/components/premier/countdown'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.bestlawyers.com'),
@@ -55,7 +56,9 @@ export default function RootLayout({
     <html lang="en" className="bg-background">
       <body className="antialiased font-sans">
         <SmoothScrollProvider>
-          <HubspotModalProvider>{children}</HubspotModalProvider>
+          <CountdownProvider>
+            <HubspotModalProvider>{children}</HubspotModalProvider>
+          </CountdownProvider>
         </SmoothScrollProvider>
       </body>
     </html>

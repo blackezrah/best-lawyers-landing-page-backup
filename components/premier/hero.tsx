@@ -71,7 +71,7 @@ export function Hero() {
             transition={{ duration: reduce ? 0 : 0.9, delay: reduce ? 0 : 0.12, ease }}
             className="mt-8 max-w-2xl text-[1.05rem] leading-[1.75] text-ivory/85 sm:text-xl"
           >
-            Premier Profile Placement moves the attorney listing behind your Best Lawyers credential into one of five placements ahead of organic results for the chosen region and practice area.
+            Premier Profile Placement moves the attorney listing behind your Best Lawyers credential into <span className="conversion-emphasis">one of five placements</span> ahead of organic results for the chosen region and practice area.
           </motion.p>
 
           <motion.div

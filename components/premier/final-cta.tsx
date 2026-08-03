@@ -42,7 +42,7 @@ export function FinalCta() {
             >
               Your competitors don&apos;t need a better reputation.
               <br />
-              They only need to move first.
+              They only need to <span className="conversion-emphasis">move first</span>.
             </motion.h2>
             <motion.div
               className="mt-12 flex justify-center"

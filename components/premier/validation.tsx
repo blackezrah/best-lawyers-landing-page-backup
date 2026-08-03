@@ -243,7 +243,7 @@ export function Validation() {
 
         <Reveal delay={0.08} y={18} className="mt-8 max-w-3xl">
           <p className="text-lg leading-relaxed text-ivory/78">
-            Across the sample, 95% of recorded interactions were a website visit, contact click, or phone tap.
+            Across the sample, <span className="conversion-emphasis">95% of recorded interactions</span> were a website visit, contact click, or phone tap.
           </p>
         </Reveal>
       </div>

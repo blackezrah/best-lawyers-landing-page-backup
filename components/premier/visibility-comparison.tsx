@@ -1,5 +1,5 @@
 import { Reveal } from './reveal'
-import { CtaButton } from './cta-button'
+import { EditorialCountdown } from './countdown'
 
 export function VisibilityComparison() {
   return (
@@ -8,7 +8,7 @@ export function VisibilityComparison() {
         <div className="mx-auto text-center">
           <Reveal x={-34}>
             <h2 className="mx-auto font-serif text-4xl font-normal leading-[1.05] tracking-[-0.02em] text-ink sm:text-5xl xl:whitespace-nowrap">
-              Premier Placement places your profile above organic listings.
+              Premier Placement places your profile <span className="conversion-emphasis">above organic listings</span>.
             </h2>
           </Reveal>
 
@@ -25,17 +25,16 @@ export function VisibilityComparison() {
             <Reveal delay={0.14} x={22}>
               <div className="border-t border-gold/40 pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
                 <h3 className="font-serif text-2xl font-medium tracking-tight text-ink">
-                  No additional inventory opens once the tier is full.
+                  There are only five Premier placements per metro and practice area.
                 </h3>
                 <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                  The cap applies to each metro and practice-area combination.
+                  Competing recognized attorneys can secure those positions before another eligible profile is reviewed.
                 </p>
-                <div className="mt-8 flex justify-center">
-                  <CtaButton variant="gold" />
-                </div>
               </div>
             </Reveal>
           </div>
+
+          <EditorialCountdown />
         </div>
       </div>
     </section>

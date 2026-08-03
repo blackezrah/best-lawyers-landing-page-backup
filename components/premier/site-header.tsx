@@ -50,7 +50,7 @@ export function SiteHeader() {
             href={meetingUrl}
             target="_top"
             rel="noopener noreferrer"
-            className="rounded-full border border-coral bg-coral px-5 py-2 text-sm font-medium tracking-tight text-ivory transition-colors hover:border-[#d91f24] hover:bg-[#d91f24]"
+            className="rounded-full border border-coral bg-transparent px-5 py-2 text-sm font-medium tracking-tight text-coral transition-colors hover:border-coral hover:bg-coral hover:text-ivory"
           >
             Schedule a Meeting
           </a>
@@ -87,7 +87,7 @@ export function SiteHeader() {
               target="_top"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 rounded-full border border-coral bg-coral px-3 py-3 text-center text-base font-medium text-ivory transition-colors hover:border-[#d91f24] hover:bg-[#d91f24]"
+              className="mt-2 rounded-full border border-coral bg-transparent px-3 py-3 text-center text-base font-medium text-coral transition-colors hover:border-coral hover:bg-coral hover:text-ivory"
             >
               Schedule a Meeting
             </a>

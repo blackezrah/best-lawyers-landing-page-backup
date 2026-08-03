@@ -303,7 +303,7 @@ export function TrustStrip() {
             transition={{ duration: reduce ? 0 : 0.62, delay: conclusionDelay, ease: EASE_OUT }}
           >
             <h3 className="font-serif text-3xl font-medium tracking-tight text-ink">
-              More than $200,000 in modeled equivalent paid-search value
+              More than <span className="conversion-emphasis">$200,000 in modeled equivalent paid-search value</span>
             </h3>
             <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">
               At the case study’s assumed average legal CPC of approximately $75, the annualized view volume of the average Premier listing represents more than $200,000 in modeled equivalent paid-search traffic.
