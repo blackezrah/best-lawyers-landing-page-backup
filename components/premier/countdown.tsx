@@ -194,11 +194,7 @@ export function EditorialCountdown() {
       animate={active ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: reduce ? 0 : 0.72, ease: [0.22, 1, 0.36, 1] }}
     >
-      <p className="text-xs uppercase tracking-[0.28em] text-gold">
-        Market Availability
-      </p>
-
-      <p className="mx-auto mt-7 max-w-2xl font-serif text-3xl font-normal leading-tight tracking-tight text-ink sm:text-4xl">
+      <p className="mx-auto max-w-2xl font-serif text-3xl font-normal leading-tight tracking-tight text-ink sm:text-4xl">
         Premier Placement enrollment for this announcement cycle closes in
       </p>
 
