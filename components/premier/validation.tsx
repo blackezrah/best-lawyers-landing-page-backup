@@ -245,9 +245,6 @@ export function Validation() {
           <p className="text-lg leading-relaxed text-ivory/78">
             Across the sample, 95% of recorded interactions were a website visit, contact click, or phone tap.
           </p>
-          <p className="mt-5 text-sm italic leading-relaxed text-ivory/55">
-            30-day GA4 event sample across 119 live Premier profiles. Annualized figures are straight-line projections. Results vary by metro, practice area, and profile completeness.
-          </p>
         </Reveal>
       </div>
     </section>
