@@ -65,7 +65,7 @@ export function PositionAdvantage() {
   const profileRef = useRef<HTMLDivElement | null>(null)
   const cursorRef = useRef<HTMLDivElement | null>(null)
   const reduce = useReducedMotion()
-  const inView = useInView(sectionRef, { once: true, margin: '-120px' })
+  const inView = useInView(sectionRef, { once: true, amount: 0.32 })
   const active = Boolean(inView)
   const [cursorPath, setCursorPath] = useState<CursorPath | null>(null)
   const [sceneBox, setSceneBox] = useState<SceneBox | null>(null)
@@ -434,7 +434,7 @@ export function PositionAdvantage() {
         className="absolute inset-y-0 left-0 z-10 w-full bg-[linear-gradient(90deg,#282e3a_0%,#282e3a_52%,rgba(40,46,58,0.92)_62%,rgba(40,46,58,0.7)_72%,rgba(40,46,58,0.42)_82%,rgba(40,46,58,0.18)_92%,rgba(40,46,58,0)_100%)] lg:w-[72%] lg:bg-[linear-gradient(90deg,#282e3a_0%,#282e3a_58%,rgba(40,46,58,0.9)_68%,rgba(40,46,58,0.62)_78%,rgba(40,46,58,0.32)_88%,rgba(40,46,58,0)_100%)]"
       />
 
-      <div className="relative z-20 mx-auto flex min-h-[100svh] w-full max-w-7xl items-center px-5 py-24 sm:px-8 sm:py-32">
+      <div className="relative z-20 mx-auto flex min-h-[100svh] w-full max-w-7xl items-center px-5 py-32 sm:px-8 sm:py-40">
         <div className="max-w-3xl lg:max-w-[29.5rem] 2xl:max-w-[32rem]">
           <Reveal x={-32}>
             <h2 className="text-balance font-serif text-4xl font-normal leading-[1.04] tracking-[-0.02em] sm:text-6xl">

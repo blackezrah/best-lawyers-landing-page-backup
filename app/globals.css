@@ -198,6 +198,27 @@
     overflow-x: clip;
   }
 
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  html.lenis:not(.lenis-stopped) {
+    scroll-behavior: auto;
+  }
+
+  html.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  html.lenis.lenis-stopped {
+    overflow: clip;
+  }
+
+  html[data-smooth-scroll='native'] {
+    scroll-behavior: auto;
+  }
+
   * {
     @apply border-border;
   }
@@ -249,10 +270,5 @@
 }
 
 html {
-  scroll-behavior: smooth;
-}
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  scroll-behavior: auto;
 }

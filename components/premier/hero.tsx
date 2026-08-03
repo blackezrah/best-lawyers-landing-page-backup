@@ -53,13 +53,13 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col px-5 pb-24 pt-32 sm:px-8 lg:justify-center lg:pb-28 lg:pt-32">
+      <div className="relative mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col px-5 pb-32 pt-40 sm:px-8 lg:justify-center lg:pb-36 lg:pt-40">
         <div className="max-w-[48rem]">
           <motion.h1
             id="hero-heading"
             initial={{ opacity: 0, y: reduce ? 0 : 28 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease }}
+            transition={{ duration: reduce ? 0 : 0.9, ease }}
             className="text-balance font-serif text-[2.7rem] font-light leading-[1.04] tracking-[-0.02em] sm:text-6xl lg:text-[4.75rem]"
           >
             The right placement starts the right conversations.
@@ -68,7 +68,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.12, ease }}
+            transition={{ duration: reduce ? 0 : 0.9, delay: reduce ? 0 : 0.12, ease }}
             className="mt-8 max-w-2xl text-[1.05rem] leading-[1.75] text-ivory/85 sm:text-xl"
           >
             Premier Profile Placement moves the attorney listing behind your Best Lawyers credential into one of five placements ahead of organic results for the chosen region and practice area.
@@ -77,7 +77,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.18, ease }}
+            transition={{ duration: reduce ? 0 : 0.9, delay: reduce ? 0 : 0.18, ease }}
             className="mt-9"
           >
             <CtaButton variant="gold" />
@@ -86,7 +86,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: reduce ? 0 : 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.24, ease }}
+            transition={{ duration: reduce ? 0 : 0.9, delay: reduce ? 0 : 0.24, ease }}
             className="mt-12 max-w-2xl border-l border-gold/50 pl-6"
           >
             <h2 className="font-serif text-2xl font-medium leading-snug tracking-tight text-ivory sm:text-3xl">

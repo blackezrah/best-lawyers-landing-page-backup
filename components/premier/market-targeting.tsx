@@ -32,7 +32,7 @@ const EASE_OUT = [0.22, 1, 0.36, 1] as const
 export function MarketTargeting() {
   const sectionRef = useRef<HTMLElement | null>(null)
   const reduce = useReducedMotion()
-  const inView = useInView(sectionRef, { once: true, margin: '-120px' })
+  const inView = useInView(sectionRef, { once: true, amount: 0.32 })
   const active = Boolean(inView)
   const stepStartDelay = reduce ? 0 : 0.92
   const stepDelay = reduce ? 0 : 0.34
@@ -42,7 +42,7 @@ export function MarketTargeting() {
     <section
       ref={sectionRef}
       id="how-it-works"
-      className="relative isolate scroll-mt-24 overflow-hidden bg-ink py-24 text-ivory sm:py-32"
+      className="relative isolate scroll-mt-24 overflow-hidden bg-ink py-32 text-ivory sm:py-40"
     >
       <div
         aria-hidden="true"

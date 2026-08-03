@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { preload } from 'react-dom'
 import './globals.css'
 import { HubspotModalProvider } from '@/components/premier/hubspot-modal'
+import { SmoothScrollProvider } from '@/components/premier/smooth-scroll-provider'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.bestlawyers.com'),
@@ -53,7 +54,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background">
       <body className="antialiased font-sans">
-        <HubspotModalProvider>{children}</HubspotModalProvider>
+        <SmoothScrollProvider>
+          <HubspotModalProvider>{children}</HubspotModalProvider>
+        </SmoothScrollProvider>
       </body>
     </html>
   )

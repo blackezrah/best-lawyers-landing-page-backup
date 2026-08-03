@@ -6,7 +6,7 @@ import { useRef } from 'react'
 const STATS = [
   {
     pillar: 'Recognition',
-    value: 'Approximately 5%',
+    value: 'Approx. 5%',
     label: 'Of practicing U.S. attorneys earn Best Lawyers recognition through peer review',
   },
   {
@@ -27,12 +27,12 @@ const EASE_OUT = [0.22, 1, 0.36, 1] as const
 export function RecognitionVsPlacement() {
   const sectionRef = useRef<HTMLElement | null>(null)
   const reduce = useReducedMotion()
-  const inView = useInView(sectionRef, { once: true, margin: '-120px' })
+  const inView = useInView(sectionRef, { once: true, amount: 0.32 })
   const active = Boolean(inView)
   const statStartDelay = reduce ? 0 : 1.82
 
   return (
-    <section ref={sectionRef} className="bg-ivory py-24 sm:py-32">
+    <section ref={sectionRef} className="bg-ivory py-32 sm:py-40">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-4xl">
           <h2

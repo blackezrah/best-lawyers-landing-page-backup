@@ -10,7 +10,7 @@ const easeOut = [0.22, 1, 0.36, 1] as const
 export function FinalCta() {
   const sectionRef = useRef<HTMLElement>(null)
   const reduce = useReducedMotion()
-  const inView = useInView(sectionRef, { once: true, margin: "-140px" })
+  const inView = useInView(sectionRef, { once: true, amount: 0.32 })
   const active = inView || reduce
 
   return (
@@ -32,7 +32,7 @@ export function FinalCta() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(40,46,58,0.22)_62%,rgba(40,46,58,0.72)_100%)]" />
         </div>
 
-        <div className="relative z-10 mx-auto flex min-h-[108svh] max-w-5xl items-center justify-center px-6 py-32 text-center md:py-44 max-md:min-h-[78svh]">
+        <div className="relative z-10 mx-auto flex min-h-[108svh] max-w-5xl items-center justify-center px-6 py-40 text-center md:py-56 max-md:min-h-[78svh]">
           <div className="mx-auto max-w-4xl">
             <motion.h2
               className="font-serif text-5xl leading-[1.1] tracking-tight text-balance md:text-7xl"

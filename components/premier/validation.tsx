@@ -192,12 +192,12 @@ function BackgroundGraph({ start }: { start: boolean }) {
 export function Validation() {
   const sectionRef = useRef<HTMLElement | null>(null)
   const reduce = useReducedMotion()
-  const inView = useInView(sectionRef, { once: true, margin: "-120px" })
+  const inView = useInView(sectionRef, { once: true, amount: 0.32 })
   const start = Boolean(inView)
   const conclusionDelay = reduce ? 0 : 2
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-ink py-24 text-ivory md:py-36">
+    <section ref={sectionRef} className="relative overflow-hidden bg-ink py-32 text-ivory md:py-44">
       <BackgroundGraph start={start} />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">

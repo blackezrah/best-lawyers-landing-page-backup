@@ -74,7 +74,7 @@ function BenefitIcon({ name, index }: { name: BenefitIconName; index: number }) 
       className="mb-7 h-12 w-12 text-gold/80 transition-colors duration-500 group-hover:text-gold"
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, amount: 0.45 }}
     >
       {name === "media" && (
         <>
@@ -228,7 +228,7 @@ export function EngagementProgression() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
 
   return (
-    <section id="four-ways-it-pays" className="scroll-mt-24 relative overflow-hidden bg-ink py-24 text-ivory md:py-36">
+    <section id="four-ways-it-pays" className="scroll-mt-24 relative overflow-hidden bg-ink py-32 text-ivory md:py-44">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal x={-32} className="max-w-3xl">
           <h2 className="font-serif text-4xl leading-[1.05] tracking-tight text-balance md:text-5xl">
@@ -243,7 +243,7 @@ export function EngagementProgression() {
           className="mt-14 grid grid-cols-1 md:grid-cols-2"
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.3 }}
           variants={{
             hidden: { gap: reduce ? 40 : 24, scale: reduce ? 1 : 0.96 },
             show: {

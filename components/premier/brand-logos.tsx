@@ -123,14 +123,14 @@ function QuoteMark({ active, delay }: { active: boolean; delay: number }) {
 export function BrandLogos() {
   const sectionRef = useRef<HTMLElement | null>(null)
   const reduce = useReducedMotion()
-  const inView = useInView(sectionRef, { once: true, margin: '-120px' })
+  const inView = useInView(sectionRef, { once: true, amount: 0.32 })
   const active = Boolean(inView)
 
   return (
     <section
       ref={sectionRef}
       id="client-trust"
-      className="relative isolate scroll-mt-24 overflow-hidden bg-ivory py-24 text-ink sm:py-32"
+      className="relative isolate scroll-mt-24 overflow-hidden bg-ivory py-32 text-ink sm:py-40"
     >
       <NetworkPattern active={active} />
 

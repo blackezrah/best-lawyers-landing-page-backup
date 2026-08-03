@@ -102,7 +102,7 @@ const FAQS: FaqItem[] = [
 export function Faq() {
   const sectionRef = useRef<HTMLElement | null>(null)
   const reduce = useReducedMotion()
-  const inView = useInView(sectionRef, { once: true, margin: "-120px" })
+  const inView = useInView(sectionRef, { once: true, amount: 0.32 })
   const active = Boolean(inView)
   const [openIndex, setOpenIndex] = useState(0)
 
@@ -110,7 +110,7 @@ export function Faq() {
     <section
       ref={sectionRef}
       id="faq"
-      className="scroll-mt-24 relative overflow-hidden bg-ink py-24 text-ivory md:py-36"
+      className="scroll-mt-24 relative overflow-hidden bg-ink py-32 text-ivory md:py-44"
     >
       <div className="mx-auto grid max-w-6xl gap-14 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div>

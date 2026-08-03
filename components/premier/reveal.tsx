@@ -36,7 +36,7 @@ export function Reveal({ children, className, delay = 0, x = 0, y = 24, as = 'di
       variants={variants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: '-80px' }}
+      viewport={{ once: true, amount: 0.35 }}
     >
       {children}
     </MotionTag>
@@ -56,7 +56,7 @@ export function Stagger({ children, className, gap = 0.09 }: StaggerProps) {
       className={className}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: '-80px' }}
+      viewport={{ once: true, amount: 0.35 }}
       variants={{
         hidden: {},
         show: { transition: { staggerChildren: reduce ? 0 : gap } },

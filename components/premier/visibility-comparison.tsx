@@ -4,7 +4,7 @@ import { CtaButton } from './cta-button'
 export function VisibilityComparison() {
   return (
     <section id="premier-advantage" className="scroll-mt-24 relative overflow-hidden bg-ivory text-ink">
-      <div className="mx-auto w-full max-w-7xl px-5 py-52 sm:px-8 sm:py-60 lg:py-72">
+      <div className="mx-auto w-full max-w-7xl px-5 py-64 sm:px-8 sm:py-72 lg:py-88">
         <div className="mx-auto text-center">
           <Reveal x={-34}>
             <h2 className="mx-auto font-serif text-4xl font-normal leading-[1.05] tracking-[-0.02em] text-ink sm:text-5xl xl:whitespace-nowrap">

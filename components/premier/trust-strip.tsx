@@ -118,8 +118,8 @@ export function TrustStrip() {
   const comparisonRef = useRef<HTMLElement | null>(null)
   const strategyRef = useRef<HTMLElement | null>(null)
   const reduce = useReducedMotion()
-  const inView = useInView(comparisonRef, { once: true, margin: '-120px' })
-  const strategyInView = useInView(strategyRef, { once: true, margin: '-120px' })
+  const inView = useInView(comparisonRef, { once: true, amount: 0.32 })
+  const strategyInView = useInView(strategyRef, { once: true, amount: 0.32 })
   const active = Boolean(inView)
   const strategyActive = Boolean(strategyInView)
   const rowStartDelay = reduce ? 0 : 2.05
@@ -132,7 +132,7 @@ export function TrustStrip() {
 
   return (
     <>
-      <section ref={comparisonRef} className="bg-parchment py-24 text-ink sm:py-32">
+      <section ref={comparisonRef} className="bg-parchment py-32 text-ink sm:py-40">
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
           <div className="max-w-4xl">
             <motion.h2
@@ -315,7 +315,7 @@ export function TrustStrip() {
         </div>
       </section>
 
-      <section ref={strategyRef} className="relative overflow-hidden bg-ink py-24 text-ivory sm:py-32">
+      <section ref={strategyRef} className="relative overflow-hidden bg-ink py-32 text-ivory sm:py-40">
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(184,136,62,0.08),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.025),transparent_38%)]"
